@@ -428,31 +428,25 @@
 
   <div id="wrapper">
     <main>
-      <h2>Contact Form</h2>
-      <p>Required fields are marked with an asterisk <span class="required">*</span></p>
-      <form method="post" action="https://sites.google.com/view/blessing-sithole">
-        <label for="myName" class="required">Name:</label>
-        <input type="text" id="myName" name="myName" required>
+  <h2>Contact Form</h2>
+  <p>Required fields are marked with an asterisk <span class="required">*</span></p>
 
-        <label for="myEmail" class="required">Email:</label>
-        <input type="email" id="myEmail" name="myEmail" required>
+  <!-- START: Intro text -->
+  <p>
+    Thank you for visiting my portfolio! I'm always excited to connect with fellow students, researchers, mentors, and changemakers from around the world. 
+    Whether you have questions about my projects, want to collaborate, or simply want to say hello — please don’t hesitate to reach out. 
+    I value meaningful conversations that spark new ideas, empower communities, and push boundaries in education, technology, and leadership.
+  </p>
+  <p>
+    Fill out the form below and I’ll get back to you as soon as possible. I look forward to hearing from you!
+  </p>
+  <!-- END: Intro text -->
 
-        <label for="myReferral" class="required">Referred by?</label>
-        <input type="text" name="myReferral" id="myReferral" list="referral" required>
-        <datalist id="referral">
-          <option>Google</option>
-          <option>Bing</option>
-          <option>Facebook</option>
-          <option>Friend</option>
-          <option>Radio Ad</option>
-        </datalist>
+  <form action="https://formspree.io/f/xvgrknvw" method="POST">
+    <!-- ... form fields ... -->
+  </form>
+</main>
 
-        <label for="myComments" class="required">Comments:</label>
-        <textarea id="myComments" name="myComments" rows="4" required></textarea>
-
-        <input type="submit" value="Send Now" id="mySubmit">
-      </form>
-    </main>
   </div>
 
   <footer>
