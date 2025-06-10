@@ -6,9 +6,7 @@
   <title>Contact Form</title>
   <link rel="stylesheet" href="style.css" />
   <meta name="description" content="Discover the inspiring journey of Blessing Sithole, born in Chipinge, Zimbabwe, and now studying in the United States. Explore achievements, academic projects in mathematics and computer science, leadership roles, and efforts to uplift under-resourced communities through education and technology." />
-
   <style>
-    /* Your full CSS here */
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -55,14 +53,10 @@
     nav ul li a:hover {
       color: #ff6347;
     }
-    #wrapper {
-      display: flex;
-      justify-content: center;
-      margin: 30px auto;
-    }
     main {
       width: 100%;
-      max-width: 600px;
+      max-width: 700px;
+      margin: 40px auto;
       padding: 30px;
       background-color: white;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -87,6 +81,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 1em;
+      box-sizing: border-box;
     }
     input[type="submit"] {
       background-color: #530eca;
@@ -120,9 +115,6 @@
       nav ul li {
         display: block;
         margin-bottom: 10px;
-      }
-      #wrapper {
-        margin: 20px;
       }
       main {
         padding: 20px;
@@ -161,7 +153,7 @@
 
   <main>
     <h2>Contact Form</h2>
-    <p>Required fields are marked With an asterisk <span class="required">*</span></p>
+    <p>Required fields are marked with an asterisk <span class="required">*</span></p>
     <p>
       Thank you for visiting my portfolio! I'm always excited to connect with fellow students, researchers, mentors, and changemakers from around the world. 
       Whether you have questions about my projects, want to collaborate, or simply want to say hello — please don’t hesitate to reach out. 
@@ -171,34 +163,32 @@
       Fill out the form below and I’ll get back to you as soon as possible. I look forward to hearing from you!
     </p>
 
-    <div id="wrapper">
-      <form action="https://formspree.io/f/xvgrknvw" method="POST">
-        <label for="myName" class="required">Name:</label>
-        <input type="text" id="myName" name="Name" required />
+    <form action="https://formspree.io/f/xvgrknvw" method="POST">
+      <label for="myName" class="required">Name:</label>
+      <input type="text" id="myName" name="Name" required />
 
-        <label for="myEmail" class="required">Email:</label>
-        <input type="email" id="myEmail" name="Email" required />
+      <label for="myEmail" class="required">Email:</label>
+      <input type="email" id="myEmail" name="Email" required />
 
-        <label for="myReferral" class="required">Referred by?</label>
-        <input type="text" name="Referral" id="myReferral" list="referral" required />
-        <datalist id="referral">
-          <option>Google</option>
-          <option>Bing</option>
-          <option>Facebook</option>
-          <option>Friend</option>
-          <option>Radio Ad</option>
-        </datalist>
+      <label for="myReferral" class="required">Referred by?</label>
+      <input type="text" name="Referral" id="myReferral" list="referral" required />
+      <datalist id="referral">
+        <option>Google</option>
+        <option>Bing</option>
+        <option>Facebook</option>
+        <option>Friend</option>
+        <option>Radio Ad</option>
+      </datalist>
 
-        <label for="myComments" class="required">Comments:</label>
-        <textarea id="myComments" name="Message" rows="4" required></textarea>
+      <label for="myComments" class="required">Comments:</label>
+      <textarea id="myComments" name="Message" rows="4" required></textarea>
 
-        <!-- Hidden spam trap and redirect -->
-        <input type="hidden" name="_next" value="https://addingtony.github.io/thank-you.html" />
-        <input type="text" name="_gotcha" style="display:none" />
+      <!-- Hidden spam trap and redirect -->
+      <input type="hidden" name="_next" value="https://addingtony.github.io/thank-you.html" />
+      <input type="text" name="_gotcha" style="display:none" />
 
-        <input type="submit" value="Send Now" id="mySubmit" />
-      </form>
-    </div>
+      <input type="submit" value="Send Now" id="mySubmit" />
+    </form>
   </main>
 
   <footer>
