@@ -4,20 +4,165 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Form</title>
+  
+  <!-- ONE combined description -->
+  <meta name="description" content="Discover the inspiring journey of Blessing Sithole, Zimbabwe-born math and computer science student in the USA, sharing academic projects, leadership, and efforts to uplift communities through education and technology." />
+
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Discover the inspiring journey of Blessing Sithole, a Zimbabwe-born student in the USA, sharing academic projects, leadership, and community empowerment through technology and education." />
 
   <style>
-    /* Insert CSS here if not using style.css */
+    /* Your full CSS here, only once */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #530eca;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header {
+      background-color: #530eca;
+      color: white;
+      padding: 20px 0;
+    }
+
+    header h1 a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: hwb(234 3% 12%);
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    #wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 30px auto;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+      padding: 30px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .required::after {
+      content: " *";
+      color: red;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="submit"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: #530eca;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff6347;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    footer {
+      background-color: #530eca;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ef7809;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      #wrapper {
+        margin: 20px;
+      }
+
+      main {
+        padding: 20px;
+        width: 90%;
+      }
+    }
   </style>
 </head>
 
 <body>
-
   <header>
     <h1><a href="index.html">Welcome to My Portfolio</a></h1>
   </header>
 
+  <!-- Navigation Bar -->
   <nav>
     <div class="menu-container">
       <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
@@ -36,7 +181,8 @@
 
   <script>
     document.getElementById('menu-toggle').addEventListener('click', function () {
-      document.getElementById('nav-links').classList.toggle('show');
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
     });
   </script>
 
@@ -45,13 +191,7 @@
       <h2>Contact Form</h2>
       <p>Required fields are marked with an asterisk <span class="required">*</span></p>
 
-      <p>
-        Thank you for visiting my portfolio! I'm always excited to connect with fellow students, researchers, mentors, and changemakers from around the world. Whether you have questions about my projects, want to collaborate, or simply want to say hello — please don’t hesitate to reach out.
-      </p>
-      <p>
-        Fill out the form below and I’ll get back to you as soon as possible. I look forward to hearing from you!
-      </p>
-
+      <!-- ✅ Your form exactly as is -->
       <form action="https://formspree.io/f/xvgrknvw" method="POST">
         <label for="myName" class="required">Name:</label>
         <input type="text" id="myName" name="Name" required>
@@ -60,7 +200,7 @@
         <input type="email" id="myEmail" name="Email" required>
 
         <label for="myReferral" class="required">Referred by?</label>
-        <input type="text" id="myReferral" name="Referral" list="referral" required>
+        <input type="text" name="Referral" id="myReferral" list="referral" required>
         <datalist id="referral">
           <option>Google</option>
           <option>Bing</option>
@@ -72,6 +212,7 @@
         <label for="myComments" class="required">Comments:</label>
         <textarea id="myComments" name="Message" rows="4" required></textarea>
 
+        <!-- Hidden spam trap and redirect -->
         <input type="hidden" name="_next" value="https://addingtony.github.io/thank-you.html" />
         <input type="text" name="_gotcha" style="display:none" />
 
@@ -81,13 +222,12 @@
   </div>
 
   <footer>
-    &copy; 2025 Blessing A Sithole<br>
-    <a href="mailto:Blessing.Sithole@Keene.edu">Blessing.Sithole@Keene.edu</a><br>
+    &copy; 2025 Blessing A Sithole<br />
+    <a href="mailto:Blessing.Sithole@Keene.edu">Blessing.Sithole@Keene.edu</a><br />
     <a href="mailto:addingtonybsithole@gmail.com">addingtonybsithole@gmail.com</a>
   </footer>
 
   <img src="beee.jpg" alt="beee" style="width: 100%; height: auto; display: block; margin-top: 20px;" />
-  
   <script src="script.js"></script>
 </body>
 </html>
