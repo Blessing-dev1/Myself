@@ -183,22 +183,24 @@ section h2 {
   font-size: 2rem;
 }
 
-/* Footer */
 footer {
-  background-color: #101ff5;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+      text-align: center;
+      padding: 20px;
+      background-color: #530eca;
+      color: white;
+    }
 
-footer a {
-  color: var(--highlight-color);
-  text-decoration: none;
-}
+    footer a {
+      color: #ed791a;
+      text-decoration: none;
+    }
 
-footer a:hover {
-  text-decoration: underline;
-}
+    footer img {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
 
 /* Buttons */
 button {
