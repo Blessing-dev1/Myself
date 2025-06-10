@@ -1,49 +1,55 @@
-/* Root CSS Variable for Consistent Highlight */
 :root {
-  --highlight-color: #0a0af2; /* Soft yellow */
+  --highlight-color: #0a0af2;
+  --background-light: #f4f4f4;
+  --background-dark: #ffffff;
+  --text-color: #222;
+  --nav-height: 60px;
 }
 
-/* General Reset */
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header */
 header {
   background: url('plan.JPG') no-repeat center center;
   background-size: cover;
-  color: hsl(240, 14%, 97%);
+  color: #fff;
   text-align: center;
-  padding: 50px 0;
+  padding: 80px 20px 40px;
 }
 
 h1 a {
-  color: #4a10f5;
+  color: var(--highlight-color);
   text-decoration: none;
-  font-size: 3em;
+  font-size: 2.5rem;
 }
 
-/* Navigation Bar Styles */
+/* Navigation */
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   background-color: #4a10f5;
   padding: 1em;
   position: relative;
-}
-
-.menu-container {
-  position: absolute;
-  left: 1em;
-  top: 1em;
+  z-index: 10;
 }
 
 #menu-toggle {
@@ -55,48 +61,29 @@ nav {
   display: none;
 }
 
-#menu-toggle:focus {
-  outline: none;
-}
-
 nav ul {
   display: flex;
+  gap: 1.5em;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 1em;
 }
 
 nav a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: var(--highlight-color);
-}
-
-/* Highlight for Active Navigation Link */
+nav a:hover,
 nav a.active {
   color: var(--highlight-color);
-  border-bottom: 3px solid var(--highlight-color);
+  border-bottom: 2px solid var(--highlight-color);
 }
 
-/* Responsive Styles */
+/* Responsive Nav */
 @media (max-width: 768px) {
   #menu-toggle {
-    display: inline-block;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
   }
 
   nav ul {
@@ -106,12 +93,8 @@ nav a.active {
     position: absolute;
     top: 100%;
     left: 0;
-    width: auto;
-    max-width: 150px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    padding: 0.5em 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 1em;
   }
 
   nav ul.show {
@@ -119,95 +102,71 @@ nav a.active {
   }
 
   nav li {
-    margin: 0.5em 1em;
-    text-align: left;
-  }
-
-  nav a {
-    font-size: 1.2em;
+    margin: 0.5em 0;
   }
 }
 
-/* Main Content Styles */
+/* Main Content */
 main {
   padding: 20px;
 }
 
-#about, #projects, #skills, #experience {
-  background-color: white;
+section {
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 80%;
-}
-
-/* Consistent Highlight Color for Section Headers */
-#about h2, #projects h2, #skills h2, #experience h2 {
-  color: var(--highlight-color);
-  text-align: center;
-  border-bottom: 2px solid var(--highlight-color);
-  padding-bottom: 5px;
-}
-
-#about p, #projects ul, .skills-list, .experience-item ul {
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
-#projects ul, .experience-item ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-
-.skills-list {
-  list-style-type: square;
-  margin-left: 20px;
-}
-
-.experience-item {
-  margin-bottom: 20px;
-}
-
-.experience-item h3 {
-  font-size: 1.2em;
-  color: var(--highlight-color);
-}
-
-/* Welcome Section */
-.welcome-section {
-  background: url('plan.JPG') no-repeat center center;
-  background-size: cover;
-  color: rgb(236, 13, 50);
-  padding: 50px 0;
-  text-align: center;
+  background-color: var(--background-dark);
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.welcome-section h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-.welcome-section p {
-  font-size: 1.2em;
-  margin-top: 10px;
+section h2 {
+  color: var(--highlight-color);
+  border-bottom: 2px solid var(--highlight-color);
+  padding-bottom: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 #about p {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
   text-align: justify;
-  padding: 20px;
+  margin-bottom: 1em;
 }
 
-/* Footer Styles */
+/* Personal Info Section */
+#personal ul {
+  list-style: none;
+  padding: 0;
+}
+
+#personal li {
+  margin: 10px 0;
+}
+
+#personal strong {
+  display: inline-block;
+  width: 180px;
+  font-weight: bold;
+}
+
+/* Welcome Section (Optional if reused) */
+.welcome-section {
+  padding: 40px 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+}
+
+/* Footer */
 footer {
   background-color: #101ff5;
   color: white;
-  padding: 20px 0;
   text-align: center;
+  padding: 20px;
 }
 
 footer a {
@@ -219,15 +178,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer img {
-  display: block;
-  margin-top: 20px;
-  max-width: 100%;
-}
+/* Buttons */
 button {
   background-color: var(--highlight-color);
+  color: white;
   border: none;
-  color: #222;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 5px;
@@ -236,12 +191,11 @@ button {
 }
 
 button:hover {
-  background-color: #ee0a15; /* Slightly darker yellow for hover */
+  background-color: #0707c6;
 }
 
-.icon, /* Add your icon classes here */
-.fa, /* FontAwesome icons if used */
-.material-icons {
+/* Icon Styling */
+.icon, .fa, .material-icons {
   color: var(--highlight-color);
   transition: color 0.3s;
 }
@@ -249,4 +203,3 @@ button:hover {
 .icon:hover, .fa:hover, .material-icons:hover {
   color: #f51023;
 }
-
