@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Discover the inspiring journey of Blessing Sithole, born in Chipinge, Zimbabwe, and now studying in the United States. Explore achievements, academic projects in mathematics and computer science, leadership roles, and efforts to uplift under-resourced communities through education and technology.">
+  <meta name="description" content="Blessing Sithole, a Zimbabwe-born math and computer science student in the USA, shares academic projects, leadership experiences, and aspirations to uplift communities through education and technology." />
+  <meta name="description" content="Explore Blessing Sithole's academic journey from Zimbabwe to the USA. Learn about research in cybersecurity, leadership roles, and contributions to mathematics and computer science." />
+  <meta name="description" content="Blessing Sithole – Mathematics and Computer Science student, leader, and researcher dedicated to secure technology and inspiring change in under-resourced communities." />
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #530eca;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header {
+      background-color: #530eca;
+      color: white;
+      padding: 20px 0;
+    }
+
+    header h1 a {
+      color: #530eca;
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background-color: hwb(234 3% 12%);
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    /* Form Section */
+    #wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 30px auto;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+      padding: 30px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    main h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .required::after {
+      content: " *";
+      color: red;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="submit"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: #530eca;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff6347;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    footer {
+      background-color: #530eca;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ef7809;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      #wrapper {
+        margin: 20px;
+      }
+
+      main {
+        padding: 20px;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="index.html">Welcome to My Portfolio</a></h1>
+  </header>
+
+<!-- Navigation Bar -->
+<nav>
+  <div class="menu-container">
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+  </div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="Leadership.html">Leadership</a></li>
+    <li><a href="Experiences.html">Experiences</a></li>
+    <li><a href="Volunteering.html">Volunteering</a></li>
+    <li><a href="extracurricular.html">Extracurricular</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<script src="scripts.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <div id="wrapper">
+    <main>
+      <h2>Contact Form</h2>
+      <p>Required fields are marked with an asterisk <span class="required">*</span></p>
+      <form method="post" action="https://sites.google.com/view/blessing-sithole">
+        <label for="myName" class="required">Name:</label>
+        <input type="text" id="myName" name="myName" required>
+
+        <label for="myEmail" class="required">Email:</label>
+        <input type="email" id="myEmail" name="myEmail" required>
+
+        <label for="myReferral" class="required">Referred by?</label>
+        <input type="text" name="myReferral" id="myReferral" list="referral" required>
+        <datalist id="referral">
+          <option>Google</option>
+          <option>Bing</option>
+          <option>Facebook</option>
+          <option>Friend</option>
+          <option>Radio Ad</option>
+        </datalist>
+
+        <label for="myComments" class="required">Comments:</label>
+        <textarea id="myComments" name="myComments" rows="4" required></textarea>
+
+        <input type="submit" value="Send Now" id="mySubmit">
+      </form>
+    </main>
+  </div>
+
+  <footer>
+    Copyright &copy; 2025 Blessing A Sithole<br>
+    <a href="mailto:yourfirstname@yourlastname.com">Blessing.Sithole@Keene.edu</a><br>
+    <a href="mailto:yourfirstname@yourlastname.com">addingtonybsithole@gmail.com</a>
+
+</footer>
+<img src="beee.jpg" alt="beee" style="width: 100%; height: auto; display: block; margin-top: 20px;">
+
+<script src="script.js"></script>
+</body>
+</html>

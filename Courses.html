@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Discover the inspiring journey of Blessing Sithole, born in Chipinge, Zimbabwe, and now studying in the United States. Explore achievements, academic projects in mathematics and computer science, leadership roles, and efforts to uplift under-resourced communities through education and technology.">
+  <meta name="description" content="Blessing Sithole, a Zimbabwe-born math and computer science student in the USA, shares academic projects, leadership experiences, and aspirations to uplift communities through education and technology." />
+  <meta name="description" content="Explore Blessing Sithole's academic journey from Zimbabwe to the USA. Learn about research in cybersecurity, leadership roles, and contributions to mathematics and computer science." />
+  <meta name="description" content="Blessing Sithole – Mathematics and Computer Science student, leader, and researcher dedicated to secure technology and inspiring change in under-resourced communities." />
+
+  <style>
+    /* Flexbox layout for side-by-side display */
+    .semesters-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px; /* Space between the sections */
+      justify-content: space-between;
+    }
+
+    section {
+      width: 45%; /* Ensures two sections fit side by side */
+      border: 1px solid #ddd;
+      padding: 15px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #530eca;
+      color: white;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: #530eca;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #333;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="welcome-section">
+      <h1><a href="index.html">Welcome to My Portfolio</a></h1>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+<nav>
+  <div class="menu-container">
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+  </div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="Leadership.html">Leadership</a></li>
+    <li><a href="Experiences.html">Experiences</a></li>
+    <li><a href="Volunteering.html">Volunteering</a></li>
+    <li><a href="extracurricular.html">Extracurricular</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<script src="scripts.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <div id="wrapper">
+    <main>
+      <h2>My Courses</h2>
+      <p>Here is a list of the courses I have taken so far at KSC. These courses have contributed to my academic growth in computer science, mathematics, and more.</p>
+
+      <!-- Semesters in Chronological Order -->
+<div class="semesters-container">
+
+  <!-- Fall 2023 -->
+  <section>
+    <h3>Fall 2023 (8/28/2023 - 12/15/2023)</h3>
+    <ul>
+      <li>Python Programming</li>
+      <li>Introduction to Sociology</li>
+      <li>Deconstructing the Academy</li>
+      <li>First Year Seminar</li>
+      <li>Introductory Statistics</li>
+      <li>Calculus I</li>
+    </ul>
+  </section>
+
+  <!-- Spring 2024 -->
+  <section>
+    <h3>Spring 2024 (1/16/2024 - 5/3/2024)</h3>
+    <ul>
+      <li>Programming Foundations I</li>
+      <li>Religion and the Holocaust</li>
+      <li>Comp Tools for Problem Solving</li>
+      <li>Calculus II</li>
+    </ul>
+  </section>
+
+  <!-- Fall 2024 -->
+  <section>
+    <h3>Fall 2024 (8/26/2024 - 12/13/2024)</h3>
+    <ul>
+      <li>Independent Study</li>
+      <li>Short Fiction From A to Z</li>
+      <li>Website Design & Construction</li>
+      <li>Discrete Math With Proof</li>
+      <li>Applied Statistics</li>
+    </ul>
+  </section>
+
+  <!-- Spring 2025 -->
+  <section>
+    <h3>Spring 2025 (1/21/2025 - 5/9/2025)</h3>
+    <ul>
+      <li>Programming Foundations II</li>
+      <li>OS Administration</li>
+      <li>Global Engagement</li>
+      <li>University Physics I</li>
+      <li>Linear Algebra</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Upcoming Courses Fall 2025 - 8/25/2025 - 12/12/2025</h3>
+    <ul>
+      <li>🕓 Data Structures & Algorithms </li>
+      <li>🕓 Database Systems </li>
+      <li>🕓 Software Engineering </li>
+      <li>🕓 Geometry </li>
+      <li>🕓 Design Visualization in Product & Engineering </li>
+    </ul>
+  </section>
+</div>
+
+      </div>
+    </main>
+
+    <footer>
+      Copyright &copy; 2025 Blessing A Sithole<br>
+      <a href="mailto:yourfirstname@yourlastname.com">Blessing.Sithole@Keene.edu</a><br>
+      <a href="mailto:yourfirstname@yourlastname.com">addingtonybsithole@gmail.com</a>
+
+  </footer>
+
+    <img src="beee.jpg" alt="beee" style="width: 100%; height: auto; display: block; margin-top: 20px;">
+  </div>
+
+</body>
+</html>

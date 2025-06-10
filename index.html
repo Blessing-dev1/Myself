@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Discover the inspiring journey of Blessing Sithole, born in Chipinge, Zimbabwe, and now studying in the United States. Explore achievements, academic projects in mathematics and computer science, leadership roles, and efforts to uplift under-resourced communities through education and technology.">
+  <meta name="description" content="Blessing Sithole, a Zimbabwe-born math and computer science student in the USA, shares academic projects, leadership experiences, and aspirations to uplift communities through education and technology." />
+  <meta name="description" content="Explore Blessing Sithole's academic journey from Zimbabwe to the USA. Learn about research in cybersecurity, leadership roles, and contributions to mathematics and computer science." />
+  <meta name="description" content="Blessing Sithole – Mathematics and Computer Science student, leader, and researcher dedicated to secure technology and inspiring change in under-resourced communities." />
+
+  <style>
+    /* CSS to style the personal information section */
+    #personal {
+      width: 80%; /* Set width as needed */
+      margin: 0 auto;
+      text-align: left;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #personal h2 {
+      text-align: center;
+    }
+
+    #personal ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #personal li {
+      margin: 10px 0;
+    }
+
+    #personal strong {
+      display: inline-block;
+      width: 200px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<script>
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      navLinks.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+</script>
+
+<header class="content">
+  <div class="welcome-section">
+    <h1><a href="index.html">Welcome to My Portfolio</a></h1>
+  </div>
+</header>
+
+<!-- Navigation Bar -->
+<nav>
+  <div class="menu-container">
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+  </div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="Leadership.html">Leadership</a></li>
+    <li><a href="Experiences.html">Experiences</a></li>
+    <li><a href="Volunteering.html">Volunteering</a></li>
+    <li><a href="extracurricular.html">Extracurricular</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<script src="scripts.js"></script>
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+<main>
+  <section id="about">
+    <h2>About Blessing Addingtony Sithole</h2>
+    <p>
+      I was born in Chipinge, a rural area in Manicaland, Zimbabwe, where access to education was a constant challenge. Growing up, I attended school barefoot and struggled to obtain even basic supplies like textbooks and notebooks. Despite these hardships, my grandparents instilled in me a profound belief that education is the key to breaking the cycle of poverty. Their guidance inspired my determination to overcome obstacles and strive for a brighter future.
+    </p>
+    <p>
+      Education became my lifeline—not just for my own aspirations but also as a way to uplift my family and community. Even when faced with inadequate classroom facilities and limited resources, I persevered. Many nights, I studied under the dim light of a kerosene lamp, driven by the hope that education could transform my circumstances and empower me to make a lasting impact on others.
+    </p>
+    <p>
+      When I received the opportunity to study in the United States, it was both a dream come true and a significant adjustment. Attending Keene State College as a Mathematics and Computer Science major has broadened my perspective and fueled my ambition. I embrace academic challenges with determination and actively seek out research opportunities to deepen my knowledge and contribute meaningfully to my field. However, I never forget my roots. The resilience and resourcefulness I learned growing up remain the foundation of my journey.
+    </p>
+    <p>
+      My passion lies in harnessing technology to address real-world problems, particularly in healthcare and education. Through my coursework and research, I explore innovative ways to use technology to drive positive change. My current project on security-driven product design, which examines cybersecurity in medical devices, has reinforced my commitment to merging technology and biology to improve lives in underserved communities like the one I come from.
+    </p>
+    <p>
+      Beyond academics, I lead as President of the Global Cultural Club, where I advocate for inclusivity and celebrate diversity. This role allows me to connect with people from various backgrounds, share my story, and learn from theirs. It also underscores my belief in the importance of representation in technology and academia.
+    </p>
+    <p>
+      Ultimately, my background shapes my ambitions. I carry the hopes of my community and remain steadfast in my commitment to creating opportunities for others. My journey has taught me resilience, empathy, and the transformative power of education. As I pursue my dream of becoming an aerospace engineer, I am driven by the belief that education and technology can uplift lives and inspire change in communities like my own.
+    </p>
+  </section>
+
+  <section id="personal">
+    <h2>Personal Information</h2>
+    <ul>
+      <li><strong>Name:</strong> Blessing A Sithole</li>
+      <li><strong>Age:</strong> 23</li>
+      <li><strong>Place of Birth:</strong> Chipinge, Manicaland, Zimbabwe</li>
+      <li><strong>Nationality:</strong> Zimbabwean</li>
+      <li><strong>Current Residence:</strong> Keene, NH, United States</li>
+      <li><strong>Career Ambition:</strong> Aerospace Engineer</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  Copyright &copy; 2025 Blessing A Sithole<br>
+  <a href="mailto:Blessing.Sithole@Keene.edu">Blessing.Sithole@Keene.edu</a><br>
+  <a href="mailto:addingtonybsithole@gmail.com">addingtonybsithole@gmail.com</a>
+</footer>
+
+<img src="beee.jpg" alt="beee" style="width: 100%; height: auto; display: block; margin-top: 20px;">
+
+<script src="script.js"></script>
+
+</body>
+</html>
