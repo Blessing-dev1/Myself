@@ -44,8 +44,8 @@ h1 a {
 /* Navigation */
 nav {
   display: flex;
+  justify-content: center; /* Center the entire nav content */
   align-items: center;
-  justify-content: space-between;
   background-color: #4a10f5;
   padding: 1em;
   position: relative;
@@ -58,13 +58,18 @@ nav {
   color: white;
   font-size: 1.5em;
   cursor: pointer;
-  display: none;
+  display: none; /* Hidden by default */
 }
 
 nav ul {
   display: flex;
   gap: 1.5em;
   list-style: none;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0; /* Optional: Remove top/bottom margin */
 }
 
 nav a {
@@ -82,16 +87,23 @@ nav a.active {
 
 /* Responsive Nav */
 @media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+    position: absolute;
+    left: 1em;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   #nav-links {
     display: none;
     flex-direction: column;
     background-color: #4a10f5;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: auto;
-    max-width: 150px;
-    border: 1px solid #444;
+    width: 100%;
+    margin-top: 0.5em;
     border-radius: 5px;
     padding: 0.5em 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -100,11 +112,19 @@ nav a.active {
   #nav-links.show {
     display: flex;
   }
-}
 
+  nav ul {
+    width: 100%;
+    gap: 0;
+  }
 
   nav li {
-    margin: 0.5em 0;
+    margin: 0.5em 1em;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -151,7 +171,7 @@ section h2 {
   font-weight: bold;
 }
 
-/* Welcome Section (Optional if reused) */
+/* Welcome Section */
 .welcome-section {
   padding: 40px 20px;
   background-color: #ddd;
