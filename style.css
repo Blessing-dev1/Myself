@@ -227,3 +227,17 @@ button:hover {
 .icon:hover, .fa:hover, .material-icons:hover {
   color: #f51023;
 }
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+.activity-grid div {
+  font-size: 0.9rem;
+}
+.activity-grid span {
+  display: block;
+  color: #555;
+  font-size: 0.75rem;
+}
+
