@@ -308,65 +308,70 @@ nav {
   cursor: pointer;
 }
 
-/* Grid-like triangle layout for laptops/tablets */
+/* Hide nav links by default on small screens */
 #nav-links {
-  display: grid;
-  gap: 10px;
-  justify-content: center;
-  list-style: none;
+  display: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  list-style: none;
 }
 
-@media (min-width: 768px) {
+/* Show nav on bigger screens */
+@media(min-width: 768px) {
   #nav-links {
-    grid-template-columns: repeat(3, auto);
-    grid-template-areas:
-      "link1 link2 link3"
-      "link4 link5 link6"
-      ".    link7   ."
-      ".    link8   ."
-      ".    link9   .";
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* max 4 columns for top row */
+    grid-auto-rows: minmax(40px, auto);
+    justify-content: center;
+    gap: 10px 20px;
+    max-width: 600px;
   }
 
-  #nav-links li:nth-child(1) { grid-area: link1; }
-  #nav-links li:nth-child(2) { grid-area: link2; }
-  #nav-links li:nth-child(3) { grid-area: link3; }
-  #nav-links li:nth-child(4) { grid-area: link4; }
-  #nav-links li:nth-child(5) { grid-area: link5; }
-  #nav-links li:nth-child(6) { grid-area: link6; }
-  #nav-links li:nth-child(7) { grid-area: link7; }
-  #nav-links li:nth-child(8) { grid-area: link8; }
-  #nav-links li:nth-child(9) { grid-area: link9; }
-}
-
-/* Mobile: vertical stacked nav */
-@media (max-width: 767px) {
-  #menu-toggle {
-    display: inline-block;
+  #nav-links li {
+    text-align: center;
   }
 
-  #nav-links {
-    display: none;
-    flex-direction: column;
+  /* Position each row to form a triangle */
+
+  /* First row: 4 items - items 1 to 4 */
+  #nav-links li:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #nav-links li:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #nav-links li:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  #nav-links li:nth-child(4) {
+    grid-column: 4;
+    grid-row: 1;
   }
 
-  #nav-links.show {
-    display: flex;
+  /* Second row: 3 items - items 5 to 7, centered under the top row */
+  #nav-links li:nth-child(5) {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+  #nav-links li:nth-child(6) {
+    grid-column: 2 / span 1;
+    grid-row: 2;
+  }
+  #nav-links li:nth-child(7) {
+    grid-column: 3 / span 1;
+    grid-row: 2;
+  }
+
+  /* Third row: 2 items - items 8 and 9, centered */
+  #nav-links li:nth-child(8) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  #nav-links li:nth-child(9) {
+    grid-column: 3;
+    grid-row: 3;
   }
 }
-
-#nav-links li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-  background-color: #6f37d2;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-#nav-links li a:hover {
-  background-color: #844be0;
-}
-
