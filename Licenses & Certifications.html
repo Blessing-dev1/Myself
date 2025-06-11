@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Licenses & Certifications</title>
-  <link rel="stylesheet" href="style.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <meta name="description" content="Explore certifications earned by Blessing Sithole in software development, AI, cloud, and web technologies.">
-
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
       color: #333;
-    }
-
-    h1, h2, h3 {
-      color: #530eca;
-      text-align: center;
     }
 
     header {
@@ -59,30 +49,40 @@
       text-decoration: underline;
     }
 
-    #activities-honors {
-      margin: 30px auto;
-      padding: 20px;
-      width: 80%;
+    .certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .cert-card {
       background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    .certificate {
-      margin-bottom: 20px;
-      background-color: #f4f4f4;
       padding: 15px;
-      border-radius: 5px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
-    .certificate h3 {
-      margin-top: 0;
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .cert-card h3 {
       color: #530eca;
+      margin-bottom: 10px;
     }
 
-    .certificate a {
+    .cert-card p {
+      margin: 5px 0;
+    }
+
+    .cert-card a {
       color: #ed791a;
       text-decoration: none;
+      font-weight: bold;
     }
 
     footer {
@@ -97,16 +97,7 @@
       text-decoration: none;
     }
 
-    footer img {
-      width: 100%;
-      height: auto;
-      margin-top: 20px;
-    }
-
     @media (max-width: 768px) {
-      #activities-honors {
-        width: 95%;
-      }
       nav ul li {
         display: block;
         margin-bottom: 10px;
@@ -116,7 +107,7 @@
 </head>
 <body>
   <header>
-    <h1><a href="index.html">Welcome to My Portfolio</a></h1>
+    <h1><a href="index.html" style="color: white; text-decoration: none;">Licenses & Certifications</a></h1>
   </header>
 
   <nav>
@@ -134,73 +125,84 @@
     </ul>
   </nav>
 
-  <script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-      document.getElementById('nav-links').classList.toggle('show');
-    });
-  </script>
-
-  <section id="activities-honors">
-    <h2>Licenses & Certifications</h2>
-
-    <div class="certificate">
+  <section class="certifications">
+    <div class="cert-card">
       <h3>Getting Started with Git and GitHub</h3>
-      <p><strong>Issuer:</strong> IBM | <strong>Issued:</strong> June 2025</p>
+      <p><strong>Issuer:</strong> IBM</p>
+      <p><strong>Issued:</strong> Jun 2025</p>
       <p><strong>Credential ID:</strong> WZ1KSOVQ33Q9</p>
-      <p><strong>Skills:</strong> Software Development</p>
-      <p><a href="https://coursera.org/share/4323855fe26c0e65778f10823ab9f5b0" target="_blank">Show credential</a></p>
+      <a href="https://coursera.org/share/4323855fe26c0e65778f10823ab9f5b0" target="_blank">Show credential</a>
+      <p>Skills: Software Development</p>
     </div>
 
-    <div class="certificate">
+    <div class="cert-card">
       <h3>Introduction to Cloud Computing</h3>
-      <p><strong>Issuer:</strong> IBM | <strong>Issued:</strong> June 2025</p>
+      <p><strong>Issuer:</strong> IBM</p>
+      <p><strong>Issued:</strong> Jun 2025</p>
       <p><strong>Credential ID:</strong> APUBD1NAS0BL</p>
-      <p><strong>Skills:</strong> Software Development · Cloud Computing</p>
-      <p><a href="https://coursera.org/share/3cd48020949c20baac070fa0a92d3e95" target="_blank">Show credential</a></p>
+      <a href="https://coursera.org/share/3cd48020949c20baac070fa0a92d3e95" target="_blank">Show credential</a>
+      <p>Skills: Software Development · Cloud Computing</p>
     </div>
 
-    <div class="certificate">
+    <div class="cert-card">
       <h3>Introduction to HTML, CSS, & JavaScript</h3>
-      <p><strong>Issuer:</strong> IBM | <strong>Issued:</strong> June 2025</p>
+      <p><strong>Issuer:</strong> IBM</p>
+      <p><strong>Issued:</strong> Jun 2025</p>
       <p><strong>Credential ID:</strong> DPQ82OEYNWCA</p>
-      <p><strong>Skills:</strong> Software Development</p>
-      <p><a href="https://coursera.org/share/876a12a249b463248e544465c3e6102e" target="_blank">Show credential</a></p>
+      <a href="https://coursera.org/share/876a12a249b463248e544465c3e6102e" target="_blank">Show credential</a>
+      <p>Skills: Software Development</p>
     </div>
 
-    <div class="certificate">
+    <div class="cert-card">
       <h3>Introduction to Software Engineering</h3>
-      <p><strong>Issuer:</strong> IBM | <strong>Issued:</strong> June 2025</p>
+      <p><strong>Issuer:</strong> IBM</p>
+      <p><strong>Issued:</strong> Jun 2025</p>
       <p><strong>Credential ID:</strong> 8IO30E4HX5S6</p>
-      <p><strong>Skills:</strong> Software Development</p>
-      <p><a href="https://coursera.org/share/5e7072c668899d60a370814f193af9dc" target="_blank">Show credential</a></p>
+      <a href="https://coursera.org/share/5e7072c668899d60a370814f193af9dc" target="_blank">Show credential</a>
+      <p>Skills: Software Development</p>
     </div>
 
-    <div class="certificate">
+    <div class="cert-card">
       <h3>Python Project for AI and Application Development</h3>
-      <p><strong>Issuer:</strong> Coursera | <strong>Issued:</strong> June 2025</p>
-      <p><strong>Skills:</strong> Software Development · Artificial Intelligence (AI)</p>
-      <p><a href="https://coursera.org/share/24c9d9001fb42a90d45f095c7a2556a9" target="_blank">Show credential</a></p>
+      <p><strong>Issuer:</strong> Coursera</p>
+      <p><strong>Issued:</strong> Jun 2025</p>
+      <a href="https://coursera.org/share/24c9d9001fb42a90d45f095c7a2556a9" target="_blank">Show credential</a>
+      <p>Skills: Software Development · Artificial Intelligence (AI)</p>
     </div>
 
-    <div class="certificate">
+    <div class="cert-card">
       <h3>Python for Data Science, AI & Development</h3>
-      <p><strong>Issuer:</strong> IBM | <strong>Issued:</strong> June 2025</p>
+      <p><strong>Issuer:</strong> IBM</p>
+      <p><strong>Issued:</strong> Jun 2025</p>
       <p><strong>Credential ID:</strong> VRZ3QU34DF8I</p>
-      <p><strong>Skills:</strong> Software Development · Artificial Intelligence (AI)</p>
-      <p><a href="https://coursera.org/share/d28dd12e1554f4fbf9f8005ccc456494" target="_blank">Show credential</a></p>
+      <a href="https://coursera.org/share/d28dd12e1554f4fbf9f8005ccc456494" target="_blank">Show credential</a>
+      <p>Skills: Software Development · Artificial Intelligence (AI)</p>
     </div>
   </section>
 
   <footer>
     <p>Connect with me:</p>
     <div class="social-links">
-      <a href="https://github.com/Blessing-dev1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://www.facebook.com/blessinga.sithole/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://www.facebook.com/blessinga.sithole/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
     </div>
     <p>&copy; 2025 Blessing A Sithole</p>
     <a href="mailto:Blessing.Sithole@Keene.edu">Blessing.Sithole@Keene.edu</a><br />
     <a href="mailto:addingtonybsithole@gmail.com">addingtonybsithole@gmail.com</a>
   </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
