@@ -292,4 +292,81 @@ button:hover {
 .certificate a:hover {
   text-decoration: underline;
 }
+nav {
+  text-align: center;
+  background-color: #530eca;
+  padding: 20px;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Grid-like triangle layout for laptops/tablets */
+#nav-links {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  #nav-links {
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas:
+      "link1 link2 link3"
+      "link4 link5 link6"
+      ".    link7   ."
+      ".    link8   ."
+      ".    link9   .";
+  }
+
+  #nav-links li:nth-child(1) { grid-area: link1; }
+  #nav-links li:nth-child(2) { grid-area: link2; }
+  #nav-links li:nth-child(3) { grid-area: link3; }
+  #nav-links li:nth-child(4) { grid-area: link4; }
+  #nav-links li:nth-child(5) { grid-area: link5; }
+  #nav-links li:nth-child(6) { grid-area: link6; }
+  #nav-links li:nth-child(7) { grid-area: link7; }
+  #nav-links li:nth-child(8) { grid-area: link8; }
+  #nav-links li:nth-child(9) { grid-area: link9; }
+}
+
+/* Mobile: vertical stacked nav */
+@media (max-width: 767px) {
+  #menu-toggle {
+    display: inline-block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+}
+
+#nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  background-color: #6f37d2;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#nav-links li a:hover {
+  background-color: #844be0;
+}
 
