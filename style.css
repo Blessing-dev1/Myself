@@ -348,3 +348,12 @@ nav {
 #nav-links li:nth-child(7) { grid-area: link7; }
 #nav-links li:nth-child(8) { grid-area: link8; }
 #nav-links li:nth-child(9) { grid-area: link9; }
+
+#nav-links {
+  justify-content: center;
+}
+
+#nav-links li:hover {
+  background-color: #7e5fff;
+}
+
