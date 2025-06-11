@@ -375,3 +375,18 @@ nav {
     grid-row: 3;
   }
 }
+/* Show nav-links when 'show' class is toggled */
+#nav-links.show {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  #nav-links {
+    display: none;
+    text-align: center;
+  }
+  #nav-links li {
+    margin: 10px 0;
+  }
+}
+
