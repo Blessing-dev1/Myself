@@ -400,6 +400,25 @@ nav {
 }
 .certifications {
   display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Force 5-column layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .certifications {
+    grid-template-columns: repeat(2, 1fr); /* Adjust for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications {
+    grid-template-columns: 1fr; /* Stack on small screens */
+  }
+}
+
+.certifications {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   padding: 20px;
