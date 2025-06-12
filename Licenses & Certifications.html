@@ -35,26 +35,36 @@
     }
 
     nav ul li {
-      display: inline;
+      display: inline-block;
       margin-right: 20px;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
 
     nav ul li a:hover {
       text-decoration: underline;
     }
 
+    #menu-toggle {
+      display: none;
+      background: none;
+      font-size: 1.5rem;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
     .certifications {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
       display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .cert-card {
@@ -84,13 +94,7 @@
       font-weight: bold;
     }
 
-    .skills-section h3 {
-      margin-top: 10px;
-      color: #222;
-    }
-
     .skills-section ul {
-      margin: 0;
       padding-left: 20px;
     }
 
@@ -106,23 +110,30 @@
       text-decoration: none;
     }
 
-    .social-links a {
-      margin: 0 10px;
-    }
-
     @media (max-width: 768px) {
       nav ul li {
         display: block;
         margin-bottom: 10px;
       }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      #nav-links {
+        display: none;
+      }
+
+      #nav-links.show {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1><a href="index.html" style="color: white; text-decoration: none;">Welcome to My Portfolio</a></h1>
-  </header>
-
+<header>
+  <h1><a href="index.html" style="color:white; text-decoration:none;">Welcome to My Portfolio</a></h1>
+</header>
 
   <nav>
     <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
