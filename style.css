@@ -398,3 +398,36 @@ nav {
   margin-top: 0;
   color: #333;
 }
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.cert-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.cert-card:hover {
+  transform: scale(1.02);
+}
+
+.cert-card h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.skills-section ul {
+  padding-left: 20px;
+}
+
+.skills-section li {
+  list-style-type: disc;
+  margin-bottom: 4px;
+}
