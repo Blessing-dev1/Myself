@@ -333,3 +333,63 @@ button:hover {
   font-family: Arial, sans-serif;
 }
 
+<style>
+  section {
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: #444;
+    margin-top: 30px;
+  }
+
+  .skills-grid, .experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .skills-list, .job-skill ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+
+  .skills-list li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #0b5ed7;
+  }
+
+  .job-skill {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .job-skill h3 {
+    font-size: 18px;
+    color: #0b5ed7;
+    margin-bottom: 10px;
+  }
+
+  .job-skill ul li {
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .skills-grid, .experience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
