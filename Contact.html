@@ -165,25 +165,25 @@
 </p>
 
 <p style="margin-bottom: 1em;">
-  Required fields are marked with an asterisk <span class="required">*</span>
+  Required fields are marked with an asterisk<span class="required"></span>
 </p>
 
 <form action="https://formspree.io/f/xvgrknvw" method="POST">
   <!-- Required Fields -->
-  <label for="myName">Name: <span class="required">*</span></label>
+  <label for="myName" class="required">Name:</label>
   <input type="text" id="myName" name="Name" required />
 
-  <label for="myEmail">Email: <span class="required">*</span></label>
+  <label for="myEmail" class="required">Email:</label>
   <input type="email" id="myEmail" name="Email" required />
-
+  <!-- Optional Fields (no class needed) -->
   <label for="myPhone">Phone:</label>
   <input type="tel" id="myPhone" name="Phone" placeholder="e.g., (123) 456-7890" />
 
-  <label for="myComments">Comments: <span class="required">*</span></label>
+
+  <label for="myComments" class="required">Comments:</label>
   <textarea id="myComments" name="Message" rows="4" required></textarea>
 
-  <!-- Optional Fields -->
-
+  
   <label for="myReferral">Referred by?</label>
   <input type="text" id="myReferral" name="Referral" list="referralOptions" placeholder="Select or type" />
   <datalist id="referralOptions">
@@ -199,6 +199,7 @@
 
   <input type="submit" value="Send Now" id="mySubmit" />
 </form>
+
 
   </main>
 
