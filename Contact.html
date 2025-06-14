@@ -168,23 +168,38 @@
   Required fields are marked with an asterisk <span class="required">*</span>
 </p>
 
+<form action="https://formspree.io/f/xvgrknvw" method="POST">
+  <!-- Required Fields -->
+  <label for="myName" class="required">Name:<span class="required">*</span></label>
+  <input type="text" id="myName" name="Name" required />
 
-    <form action="https://formspree.io/f/xvgrknvw" method="POST">
-      <label for="myName" class="required">Name:</label>
-      <input type="text" id="myName" name="Name" required />
+  <label for="myEmail" class="required">Email:<span class="required">*</span></label>
+  <input type="email" id="myEmail" name="Email" required />
 
-      <label for="myEmail" class="required">Email:</label>
-      <input type="email" id="myEmail" name="Email" required />
+  <!-- Optional Fields -->
+  <label for="myPhone">Phone (optional):</label>
+  <input type="tel" id="myPhone" name="Phone" placeholder="e.g., (123) 456-7890" />
 
-      <label for="myComments" class="required">Comments:</label>
-      <textarea id="myComments" name="Message" rows="4" required></textarea>
+  <label for="myReferral">Referred by? (optional):</label>
+  <input type="text" id="myReferral" name="Referral" list="referralOptions" placeholder="Select or type" />
+  <datalist id="referralOptions">
+    <option value="Friend">
+    <option value="Social Media">
+    <option value="Google Search">
+    <option value="Event">
+  </datalist>
+  <label for="myComments" class="required">Comments:<span class="required">*</span></label>
+  <textarea id="myComments" name="Message" rows="4" required></textarea>
 
-      <!-- Hidden spam trap and redirect -->
-      <input type="hidden" name="_next" value="https://addingtony.github.io/thank-you.html" />
-      <input type="text" name="_gotcha" style="display:none" />
+  <label for="newsletter">Subscribe to our newsletter? (optional)</label>
+  <input type="checkbox" id="newsletter" name="Newsletter" value="Yes" />
 
-      <input type="submit" value="Send Now" id="mySubmit" />
-    </form>
+  <!-- Hidden spam trap and redirect -->
+  <input type="hidden" name="_next" value="https://addingtony.github.io/thank-you.html" />
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <input type="submit" value="Send Now" id="mySubmit" />
+</form>
   </main>
 
   <footer>
