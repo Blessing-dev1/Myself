@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blessing A Sithole | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+
+    .hero {
+      background: url('background.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: left;
+      max-width: 650px;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #222;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 20px 0;
+      color: #444;
+    }
+
+    nav {
+      margin: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #530eca;
+      padding: 6px 12px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.7);
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #530eca;
+      color: #fff;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .hero-buttons a {
+      background: orange;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .hero-buttons a:hover {
+      background: #d35400;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+      Comprehensive view of my journey, achievements, and dreams.<br />
+      Explore my story, projects, and how I'm using tech to shape the future.
+    </p>
+
+    <!-- Navigation bar appears only on this home page -->
+    <nav>
+      <ul>
+        <li><a href="MyJourney.html">My Journey</a></li>
+        <li><a href="Licenses & Certifications.html">Licenses & Certifications</a></li>
+        <li><a href="Leadership.html">Leadership</a></li>
+        <li><a href="Courses.html">Courses</a></li>
+        <li><a href="Experiences.html">Experiences</a></li>
+        <li><a href="Volunteering.html">Volunteering</a></li>
+        <li><a href="Extracurricular.html">Extracurricular</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Only READ MORE button -->
+    <div class="hero-buttons">
+      <a href="MyJourney.html">READ MORE</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Connect with me:</p>
+  <div class="social-links">
+    <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://www.facebook.com/blessinga.sithole/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+  </div>
+  <p>&copy; 2025 Blessing A Sithole</p>
+  <a href="mailto:Blessing.Sithole@Keene.edu">Blessing.Sithole@Keene.edu</a><br />
+  <a href="mailto:addingtonybsithole@gmail.com">addingtonybsithole@gmail.com</a>
+</footer>
+
+</body>
+</html>
