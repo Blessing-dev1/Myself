@@ -104,6 +104,9 @@ section h2 {
   padding-bottom: 0.5em;
   margin-bottom: 1em;
 }
+body.blue-bg {
+  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
+}
 
 /* Forms */
 form label {
@@ -201,4 +204,5 @@ body {
   background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
   color: #fff; /* optional: for good contrast */
 }
+
 
