@@ -194,3 +194,11 @@ footer img {
   .certifications { grid-template-columns: 1fr; }
   .skills-grid, .experience-grid { grid-template-columns: 1fr; }
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
+  color: #fff; /* optional: for good contrast */
+}
+
