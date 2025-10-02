@@ -1,9 +1,9 @@
 :root {
-  --highlight-color: #530eca;   /* purple brand color */
-  --accent-color: #ff6347;      /* orange hover/accent */
-  --background-light: #ffffff;  /* full white background */
-  --background-dark: #ffffff;   /* white sections/cards */
-  --text-color: #000;           /* black text */
+  --highlight-color: #530eca;
+  --accent-color: #ff6347;
+  --background-light: #f9f9f9;
+  --background-dark: #ffffff;
+  --text-color: #333;
   --nav-height: 60px;
 }
 
@@ -14,11 +14,11 @@
   box-sizing: border-box;
 }
 
-/* Base */
+/* Base Body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: var(--nav-height) 0 100px; /* prevent nav/footer overlap */
+  padding: var(--nav-height) 0 100px; /* avoid nav/footer overlap */
   background-color: var(--background-light);
   color: var(--text-color);
   line-height: 1.6;
@@ -84,14 +84,23 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-/* Main Content */
-main, section {
+/* Main Layout */
+main {
+  width: 100%;
   max-width: 1000px;
   margin: 30px auto;
   padding: 20px;
   background-color: var(--background-dark);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+section {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 section h2 {
   border-bottom: 2px solid var(--highlight-color);
@@ -104,7 +113,6 @@ form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #000; /* black form labels */
 }
 .required::after {
   content: " *";
@@ -122,7 +130,6 @@ textarea {
   border-radius: 4px;
   font-size: 1em;
   box-sizing: border-box;
-  color: #000; /* black text inside fields */
 }
 input[type="submit"] {
   background-color: var(--highlight-color);
@@ -135,7 +142,7 @@ input[type="submit"]:hover {
 }
 textarea { resize: vertical; }
 
-/* Cards / Blocks */
+/* Cards / Content Blocks */
 .activity, .cert-card, .project-card, .job-skill {
   background: #fff;
   padding: 15px;
