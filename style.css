@@ -209,5 +209,32 @@ body.blue-bg {
   background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
   color: #fff; /* White text for contrast */
 }
+body.blue-bg {
+  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
+  color: #fff;  /* makes body text white */
+}
+
+body.blue-bg h1,
+body.blue-bg h2,
+body.blue-bg h3,
+body.blue-bg p,
+body.blue-bg label {
+  color: #fff;  /* ensures headings, paragraphs, labels are white */
+}
+
+body.blue-bg input,
+body.blue-bg textarea,
+body.blue-bg select {
+  background-color: #fff;  /* keep form fields white */
+  color: #000;             /* dark text inside form fields */
+  border: 1px solid #ccc;
+}
+body.blue-bg a {
+  color: #ffdd55; /* yellow for contrast */
+}
+body.blue-bg a:hover {
+  color: #ff8800;
+}
+
 
 
