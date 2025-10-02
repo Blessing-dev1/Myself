@@ -136,3 +136,38 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* === FINAL OVERRIDES: Keep sides blue, content white/black === */
+
+/* Page background: Boeing blue gradient (RIGHT -> LEFT) */
+body {
+  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7) !important;
+}
+
+/* White content card in the middle */
+main,
+section {
+  background: #ffffff !important;   /* white card */
+  color: #000000 !important;         /* black text */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Make headings inside cards black for max readability */
+main h1, main h2, main h3,
+section h1, section h2, section h3,
+main p, section p, main li, section li,
+form label {
+  color: #000000 !important;
+}
+
+/* Form fields: white with black text */
+input, textarea, select {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ccc !important;
+}
+::placeholder {
+  color: #777 !important;
+  opacity: 1;
+}
+
