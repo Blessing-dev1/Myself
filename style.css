@@ -205,4 +205,9 @@ body {
   color: #fff; /* optional: for good contrast */
 }
 
+body.blue-bg {
+  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
+  color: #fff; /* White text for contrast */
+}
+
 
