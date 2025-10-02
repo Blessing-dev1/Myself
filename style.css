@@ -1,61 +1,34 @@
 :root {
   --highlight-color: #530eca;
+  --accent-color: #ff6347;
   --background-light: #f9f9f9;
   --background-dark: #ffffff;
   --text-color: #333;
   --nav-height: 60px;
 }
 
-/* Reset & Base */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base Body */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: var(--nav-height) 0 100px; /* prevent nav/footer overlap */
+  padding: var(--nav-height) 0 100px; /* avoid nav/footer overlap */
   background-color: var(--background-light);
   color: var(--text-color);
   line-height: 1.6;
 }
 
-/* BLUE BACKGROUND (non-index pages) */
-body.blue-bg {
-  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
-  color: #fff; /* default text is white */
-}
-
-body.blue-bg h1,
-body.blue-bg h2,
-body.blue-bg h3,
-body.blue-bg p,
-body.blue-bg label {
-  color: #fff; /* make text & labels visible */
-}
-
-body.blue-bg input,
-body.blue-bg textarea,
-body.blue-bg select {
-  background-color: #fff; /* white fields */
-  color: #000;            /* black text inside */
-  border: 1px solid #ccc;
-}
-
-body.blue-bg a {
-  color: #ffdd55; /* yellow links */
-}
-body.blue-bg a:hover {
-  color: #ff8800;
-}
-
 /* Typography */
 h1, h2, h3 {
-  color: var(--highlight-color);
   text-align: center;
   margin-bottom: 20px;
+  color: var(--highlight-color);
 }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.75rem; }
@@ -63,7 +36,7 @@ h3 { font-size: 1.5rem; }
 
 /* Header */
 header {
-  background: var(--highlight-color);
+  background-color: var(--highlight-color);
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -84,7 +57,6 @@ nav {
   width: 100%;
   z-index: 1000;
 }
-
 #menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -93,7 +65,6 @@ nav {
   color: white;
   cursor: pointer;
 }
-
 nav ul {
   list-style: none;
   margin: 0;
@@ -101,22 +72,31 @@ nav ul {
 }
 nav ul li {
   display: inline-block;
-  margin-right: 20px;
+  margin: 0 15px;
 }
 nav ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 1.1em;
   transition: color 0.3s;
 }
 nav ul li a:hover {
-  color: #ff6347;
+  color: var(--accent-color);
 }
 
-/* Main Content */
-main, section {
+/* Main Layout */
+main {
+  width: 100%;
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+section {
+  max-width: 1000px;
+  margin: 30px auto;
   padding: 20px;
   background-color: var(--background-dark);
   border-radius: 10px;
@@ -158,30 +138,21 @@ input[type="submit"] {
   transition: background-color 0.3s;
 }
 input[type="submit"]:hover {
-  background-color: #ff6347;
+  background-color: var(--accent-color);
 }
 textarea { resize: vertical; }
 
-/* Grids */
-.activity-grid, .grid-container, .certifications, .project-grid {
-  display: grid;
-  gap: 20px;
-}
-.activity-grid { grid-template-columns: repeat(6, 1fr); }
-.grid-container { grid-template-columns: repeat(4, 1fr); }
-.certifications { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
-.project-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-
-/* Cards */
-.cert-card, .project-card, .job-skill, .activity {
+/* Cards / Content Blocks */
+.activity, .cert-card, .project-card, .job-skill {
   background: #fff;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  margin-bottom: 20px;
 }
 .cert-card:hover, .project-card:hover {
   transform: translateY(-5px);
+  transition: transform 0.2s ease;
 }
 
 /* Footer */
@@ -212,26 +183,5 @@ footer img {
 @media (max-width: 768px) {
   nav ul li { display: block; margin: 10px 0; }
   #menu-toggle { display: block; }
-  main, section { width: 95%; }
-  .activity-grid, .grid-container { grid-template-columns: 1fr; }
-  .certifications { grid-template-columns: 1fr; }
-  .skills-grid, .experience-grid { grid-template-columns: 1fr; }
+  main, section { width: 90%; padding: 15px; }
 }
-/* Fix for pages with blue background */
-body.blue-bg main,
-body.blue-bg section {
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark background */
-  color: #fff;                    /* white text inside sections */
-}
-
-body.blue-bg main h1,
-body.blue-bg main h2,
-body.blue-bg main h3,
-body.blue-bg section h1,
-body.blue-bg section h2,
-body.blue-bg section h3,
-body.blue-bg section p,
-body.blue-bg section li {
-  color: #fff; /* force headings, paragraphs, list items white */
-}
-
