@@ -84,21 +84,13 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-/* Main Layout */
-main {
-  width: 100%;
+/* Main Layout (white card look) */
+main, section {
   max-width: 1000px;
   margin: 30px auto;
   padding: 20px;
-  background-color: var(--background-dark);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-section {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: var(--background-dark);
+  background-color: #ffffff; /* white */
+  color: #000000;            /* black text */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -106,6 +98,7 @@ section h2 {
   border-bottom: 2px solid var(--highlight-color);
   padding-bottom: 0.5em;
   margin-bottom: 1em;
+  color: #000; /* override purple for readability */
 }
 
 /* Forms */
@@ -113,6 +106,7 @@ form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
+  color: #000;
 }
 .required::after {
   content: " *";
@@ -130,6 +124,8 @@ textarea {
   border-radius: 4px;
   font-size: 1em;
   box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
 }
 input[type="submit"] {
   background-color: var(--highlight-color);
