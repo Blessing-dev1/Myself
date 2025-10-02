@@ -22,10 +22,33 @@ body {
   line-height: 1.6;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* BLUE BACKGROUND (non-index pages) */
+body.blue-bg {
+  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
+  color: #fff; /* default text is white */
+}
+
+body.blue-bg h1,
+body.blue-bg h2,
+body.blue-bg h3,
+body.blue-bg p,
+body.blue-bg label {
+  color: #fff; /* make text & labels visible */
+}
+
+body.blue-bg input,
+body.blue-bg textarea,
+body.blue-bg select {
+  background-color: #fff; /* white fields */
+  color: #000;            /* black text inside */
+  border: 1px solid #ccc;
+}
+
+body.blue-bg a {
+  color: #ffdd55; /* yellow links */
+}
+body.blue-bg a:hover {
+  color: #ff8800;
 }
 
 /* Typography */
@@ -103,9 +126,6 @@ section h2 {
   border-bottom: 2px solid var(--highlight-color);
   padding-bottom: 0.5em;
   margin-bottom: 1em;
-}
-body.blue-bg {
-  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
 }
 
 /* Forms */
@@ -197,44 +217,3 @@ footer img {
   .certifications { grid-template-columns: 1fr; }
   .skills-grid, .experience-grid { grid-template-columns: 1fr; }
 }
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
-  color: #fff; /* optional: for good contrast */
-}
-
-body.blue-bg {
-  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
-  color: #fff; /* White text for contrast */
-}
-body.blue-bg {
-  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7);
-  color: #fff;  /* makes body text white */
-}
-
-body.blue-bg h1,
-body.blue-bg h2,
-body.blue-bg h3,
-body.blue-bg p,
-body.blue-bg label {
-  color: #fff;  /* ensures headings, paragraphs, labels are white */
-}
-
-body.blue-bg input,
-body.blue-bg textarea,
-body.blue-bg select {
-  background-color: #fff;  /* keep form fields white */
-  color: #000;             /* dark text inside form fields */
-  border: 1px solid #ccc;
-}
-body.blue-bg a {
-  color: #ffdd55; /* yellow for contrast */
-}
-body.blue-bg a:hover {
-  color: #ff8800;
-}
-
-
-
