@@ -175,3 +175,41 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* Semester Container */
+.semesters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* 2 per row */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Each semester box */
+.semesters-container section {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.semesters-container section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.semesters-container h3 {
+  color: #530eca;
+  margin-bottom: 10px;
+}
+
+.semesters-container ul {
+  padding-left: 20px;
+}
+
+.semesters-container li {
+  margin-bottom: 5px;
+}
+
