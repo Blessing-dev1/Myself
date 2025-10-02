@@ -185,3 +185,11 @@ footer img {
   #menu-toggle { display: block; }
   main, section { width: 90%; padding: 15px; }
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
