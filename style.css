@@ -213,3 +213,79 @@ footer a:hover {
   margin-bottom: 5px;
 }
 
+/* Base nav styling */
+nav {
+  background-color: #530eca;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navigation links (default desktop view) */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6347;
+}
+
+/* Toggle button (hidden on desktop) */
+#menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+/* --- Mobile Styles --- */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* hide links on small screens */
+    flex-direction: column;
+    background-color: #530eca;
+    position: absolute;
+    top: 60px; /* just below nav */
+    right: 0;
+    width: 200px;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+  nav ul.show {
+    display: flex; /* show links when toggle is clicked */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* show the ☰ button only on small screens */
+  #menu-toggle {
+    display: block;
+  }
+}
+
