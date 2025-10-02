@@ -1,8 +1,6 @@
 :root {
   --highlight-color: #530eca;
   --accent-color: #ff6347;
-  --background-light: #f9f9f9;
-  --background-dark: #ffffff;
   --text-color: #333;
   --nav-height: 60px;
 }
@@ -14,12 +12,12 @@
   box-sizing: border-box;
 }
 
-/* Base Body */
+/* Body = Boeing blue gradient background */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: var(--nav-height) 0 100px; /* avoid nav/footer overlap */
-  background-color: var(--background-light);
+  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7); /* Boeing gradient right → left */
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -57,14 +55,6 @@ nav {
   width: 100%;
   z-index: 1000;
 }
-#menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
 nav ul {
   list-style: none;
   margin: 0;
@@ -84,21 +74,21 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
-/* Main Layout (white card look) */
+/* Content Card (all pages) */
 main, section {
   max-width: 1000px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #ffffff; /* white */
+  background-color: #ffffff; /* white container */
   color: #000000;            /* black text */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-section h2 {
-  border-bottom: 2px solid var(--highlight-color);
-  padding-bottom: 0.5em;
-  margin-bottom: 1em;
-  color: #000; /* override purple for readability */
+
+/* Headings inside content card */
+main h1, main h2, main h3,
+section h1, section h2, section h3 {
+  color: #000000; /* black inside cards */
 }
 
 /* Forms */
@@ -108,47 +98,24 @@ form label {
   font-weight: bold;
   color: #000;
 }
-.required::after {
-  content: " *";
-  color: red;
-}
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="submit"],
-textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
-  box-sizing: border-box;
-  background-color: #fff;
+  background: #fff;
   color: #000;
 }
 input[type="submit"] {
   background-color: var(--highlight-color);
-  color: white;
+  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 input[type="submit"]:hover {
   background-color: var(--accent-color);
-}
-textarea { resize: vertical; }
-
-/* Cards / Content Blocks */
-.activity, .cert-card, .project-card, .job-skill {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
-.cert-card:hover, .project-card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.2s ease;
 }
 
 /* Footer */
@@ -168,16 +135,4 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
-}
-footer img {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul li { display: block; margin: 10px 0; }
-  #menu-toggle { display: block; }
-  main, section { width: 90%; padding: 15px; }
 }
