@@ -217,3 +217,21 @@ footer img {
   .certifications { grid-template-columns: 1fr; }
   .skills-grid, .experience-grid { grid-template-columns: 1fr; }
 }
+/* Fix for pages with blue background */
+body.blue-bg main,
+body.blue-bg section {
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark background */
+  color: #fff;                    /* white text inside sections */
+}
+
+body.blue-bg main h1,
+body.blue-bg main h2,
+body.blue-bg main h3,
+body.blue-bg section h1,
+body.blue-bg section h2,
+body.blue-bg section h3,
+body.blue-bg section p,
+body.blue-bg section li {
+  color: #fff; /* force headings, paragraphs, list items white */
+}
+
