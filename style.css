@@ -87,7 +87,9 @@ main, section {
 
 /* Headings inside content card */
 main h1, main h2, main h3,
-section h1, section h2, section h3 {
+section h1, section h2, section h3,
+main p, section p, main li, section li,
+form label {
   color: #000000; /* black inside cards */
 }
 
@@ -96,9 +98,8 @@ form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #000;
 }
-input, textarea {
+input, textarea, select {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -116,6 +117,10 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   background-color: var(--accent-color);
+}
+::placeholder {
+  color: #777;
+  opacity: 1;
 }
 
 /* Footer */
@@ -136,38 +141,9 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-/* === FINAL OVERRIDES: Keep sides blue, content white/black === */
 
-/* Page background: Boeing blue gradient (RIGHT -> LEFT) */
-body {
-  background: linear-gradient(to left, #0033A1, #4a90e2, #a7c7f7) !important;
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul li { display: block; margin: 10px 0; }
+  main, section { width: 90%; padding: 15px; }
 }
-
-/* White content card in the middle */
-main,
-section {
-  background: #ffffff !important;   /* white card */
-  color: #000000 !important;         /* black text */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Make headings inside cards black for max readability */
-main h1, main h2, main h3,
-section h1, section h2, section h3,
-main p, section p, main li, section li,
-form label {
-  color: #000000 !important;
-}
-
-/* Form fields: white with black text */
-input, textarea, select {
-  background: #ffffff !important;
-  color: #000000 !important;
-  border: 1px solid #ccc !important;
-}
-::placeholder {
-  color: #777 !important;
-  opacity: 1;
-}
-
