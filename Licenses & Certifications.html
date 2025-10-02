@@ -6,13 +6,14 @@
   <title>Licenses & Certifications</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
-    /* Page Heading */
+    /* Page Title */
     h2.page-title {
       text-align: center;
       margin: 30px 0;
-      color: #000;
       font-size: 2rem;
+      color: #000;
       border-bottom: 3px solid #530eca;
       display: inline-block;
       padding-bottom: 5px;
@@ -21,17 +22,15 @@
     /* Certifications Grid */
     .certifications {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(4, 1fr); /* 4 per row */
       gap: 20px;
       max-width: 1200px;
-      margin: 0 auto 50px auto;
+      margin: 30px auto;
       padding: 20px;
     }
 
-    /* Certification Card */
     .cert-card {
       background: #fff;
-      color: #000;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -44,30 +43,42 @@
     }
 
     .cert-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      margin-top: 0;
       margin-bottom: 10px;
       color: #530eca;
     }
 
     .cert-card p {
-      margin: 6px 0;
-      font-size: 0.95rem;
+      margin: 5px 0;
+      font-size: 0.9rem;
+      color: #333;
     }
 
     .cert-card a {
       display: inline-block;
       margin-top: 10px;
-      padding: 8px 12px;
-      background: #530eca;
-      color: #fff;
-      border-radius: 5px;
       font-size: 0.9rem;
+      color: #530eca;
+      font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s;
     }
 
     .cert-card a:hover {
-      background: #ff6347;
+      color: #ff6347;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 1024px) {
+      .certifications {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .certifications {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
+      }
     }
   </style>
 </head>
@@ -89,11 +100,11 @@
     </ul>
   </nav>
 
-  <!-- Page Content -->
+  <!-- Certifications Grid -->
   <main>
     <h2 class="page-title">Licenses & Certifications</h2>
-
     <section class="certifications">
+
       <div class="cert-card">
         <h3>Introduction to Software Engineering</h3>
         <p><strong>Issuer:</strong> IBM</p>
@@ -161,6 +172,7 @@
         <p><strong>Issued:</strong> Dec 2024</p>
         <a href="https://app.nsls.org/web/public/social/share/badge/4dS8R6LBDYfpNNXVeDzpMP" target="_blank">Show credential</a>
       </div>
+
     </section>
   </main>
 
@@ -181,7 +193,7 @@
     <p>&copy; 2025 Blessing A Sithole</p>
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- Mobile Menu -->
   <script>
     document.getElementById('menu-toggle').addEventListener('click', function () {
       const navLinks = document.getElementById('nav-links');
