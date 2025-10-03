@@ -288,3 +288,66 @@ nav ul li a:hover {
     display: block;
   }
 }
+/* Fullscreen Hero Section (only index) */
+.home-hero {
+  position: relative;
+  height: 100vh; /* take full screen height */
+  width: 100%;   /* full width */
+  background: url('your-image.jpg') no-repeat center center;
+  background-size: cover; /* ensures image fills entire area */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* keep text on left */
+  text-align: left;
+  padding: 40px;
+}
+
+/* Boeing gradient overlay */
+.home-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 51, 161, 0.6), rgba(167, 199, 247, 0.4));
+  z-index: 1;
+}
+
+/* Content always above overlay */
+.home-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  color: #000; /* black text */
+}
+
+/* Text styles */
+.home-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.home-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button style */
+.home-hero a.button {
+  display: inline-block;
+  background: #530eca;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.home-hero a.button:hover {
+  background: #ff6347;
+}
+
