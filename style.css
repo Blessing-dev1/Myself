@@ -289,3 +289,62 @@ nav ul li a:hover {
   }
 }
 
+/* Only for index page hero section */
+.home-hero {
+  position: relative;
+  height: 100vh; /* full screen height */
+  background: url('your-image.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 40px;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Boeing light blue gradient overlay: left → right */
+  background: linear-gradient(to right, rgba(0, 51, 161, 0.6), rgba(167, 199, 247, 0.4));
+  z-index: 1;
+}
+
+.home-hero .hero-content {
+  position: relative;
+  z-index: 2; /* keep text above overlay */
+  max-width: 700px;
+  color: #000; /* black text */
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.home-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+.home-hero a.button {
+  display: inline-block;
+  background: #530eca;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.home-hero a.button:hover {
+  background: #ff6347;
+}
+
