@@ -384,5 +384,35 @@ footer a:hover {
     font-size: 2.8em;
   }
 }
+.media-features {
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.media-features h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #002147;
+  margin-bottom: 1rem;
+}
+.media-features ul {
+  list-style-type: none;
+  padding: 0;
+}
+.media-features li {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
+.media-features a {
+  color: #0044aa;
+  text-decoration: none;
+}
+.media-features a:hover {
+  text-decoration: underline;
+}
+
 
 
