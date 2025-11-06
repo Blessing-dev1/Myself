@@ -408,3 +408,134 @@ footer a:hover {
     position: relative;
   }
 }
+/* ============================================
+   PORTFOLIO HOMEPAGE ENHANCEMENTS
+   ============================================ */
+
+/* Sidebar adjustments */
+.sidebar {
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* Bigger profile image */
+.sidebar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0072CE;
+  margin-bottom: 30px;
+  box-shadow: 0 0 25px rgba(0, 114, 206, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sidebar img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(167, 199, 247, 0.9);
+}
+
+/* Clean, vertical professional social links */
+.sidebar .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.sidebar .social-links a {
+  color: #ffffff;
+  font-size: 1.05em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+.sidebar .social-links a:hover {
+  color: #A7C7F7;
+  transform: scale(1.05);
+}
+
+/* Center panel (main) layout improvements */
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+              url('Roots.png') no-repeat center center/cover;
+  border-radius: 15px;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+}
+.main h1 {
+  font-size: 2.4em;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+.main p {
+  color: #e5e5e5;
+  font-size: 1.15em;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.main a {
+  align-self: center;
+  background: linear-gradient(90deg, #0033A1, #0072CE);
+  padding: 15px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 51, 161, 0.6);
+}
+.main a:hover {
+  background: linear-gradient(90deg, #0072CE, #4A90E2);
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(167, 199, 247, 0.9);
+}
+
+/* Personal Information section wider + cleaner */
+.info {
+  padding: 40px 30px;
+  font-size: 1.05em;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(83, 14, 202, 0.3);
+}
+.info h2 {
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.info li {
+  margin: 14px 0;
+  color: #e0e0e0;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: left;
+}
+.info strong {
+  color: #ffffff;
+}
+
+/* Adjust responsive view for spacing */
+@media (max-width: 768px) {
+  .main {
+    padding: 40px 25px;
+  }
+  .main h1 {
+    font-size: 2em;
+  }
+  .sidebar img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
