@@ -4,158 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blessing Sithole | Portfolio</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Discover the inspiring journey of Blessing Sithole — a Zimbabwe-born Mathematics and Computer Science student in the USA. Explore his academic projects, leadership, and commitment to using technology for social good." />
+  <meta property="og:title" content="Blessing Sithole | Portfolio" />
+  <meta property="og:description" content="Student, developer, and leader leveraging technology to make meaningful impact." />
+  <meta property="og:image" content="https://blessing-dev1.github.io/background.png" />
+  <meta property="og:url" content="https://blessing-dev1.github.io/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Icons & Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #0a0a0a;
-      color: #fff;
-      display: flex;
-      min-height: 100vh;
-    }
-
-    /* === Layout === */
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      gap: 20px;
-      width: 100%;
-      padding: 40px;
-      box-sizing: border-box;
-    }
-
-    .sidebar, .main, .info {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-    }
-
-    /* === Left Sidebar === */
-    .sidebar {
-      text-align: center;
-    }
-
-    .sidebar img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #6c63ff;
-      margin-bottom: 20px;
-    }
-
-    .sidebar h2 {
-      font-size: 1.4em;
-      margin-bottom: 20px;
-    }
-
-    .social-links a {
-      display: block;
-      color: #fff;
-      margin: 10px 0;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      color: #6c63ff;
-      transform: translateX(5px);
-    }
-
-    /* === Center Main Section === */
-    .main h1 {
-      font-size: 2em;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-
-    .main p {
-      line-height: 1.6;
-      color: #ddd;
-      margin-bottom: 25px;
-    }
-
-    .main a {
-      background: #6c63ff;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .main a:hover {
-      background: #ed791a;
-    }
-
-    /* === Right Sidebar (Personal Info) === */
-    .info h2 {
-      font-size: 1.4em;
-      margin-bottom: 15px;
-    }
-
-    .info ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .info li {
-      margin: 10px 0;
-      color: #ccc;
-    }
-
-    .info strong {
-      color: #fff;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      padding: 15px;
-      background: #6c63ff;
-      color: white;
-      font-size: 0.9em;
-    }
-
-    /* === Responsive === */
-    @media (max-width: 900px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-      footer {
-        position: relative;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <div class="container">
-    <!-- Left: Profile and Links -->
+  <div class="index-container">
+    <!-- LEFT: Profile + Social Links -->
     <aside class="sidebar">
       <img src="profile.jpg" alt="Blessing Sithole" />
       <h2>Profile</h2>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank">
+        <a href="https://www.linkedin.com/in/blessing-a-sithole-a567b829a" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://www.facebook.com/blessinga.sithole/" target="_blank">
+        <a href="https://www.facebook.com/blessinga.sithole/" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-facebook"></i> Facebook
         </a>
-        <a href="https://github.com/Blessing-dev1" target="_blank">
+        <a href="https://github.com/Blessing-dev1" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-github"></i> GitHub
         </a>
       </div>
     </aside>
 
-    <!-- Center: Welcome Message -->
+    <!-- CENTER: Welcome Message -->
     <main class="main">
       <h1>Welcome to My Portfolio</h1>
       <p>
@@ -166,7 +49,7 @@
       <a href="MyJourney.html">Read More About Me</a>
     </main>
 
-    <!-- Right: Personal Info -->
+    <!-- RIGHT: Personal Info -->
     <aside class="info">
       <h2>Personal Information</h2>
       <ul>
