@@ -665,39 +665,44 @@ footer {
 }
 
 /* =====================================================
-   PROJECTS – SIMPLE ICON LINKS (FINAL)
+   PROJECTS – CLEAN LINK LIST (FINAL FIX)
    ===================================================== */
 
 .projects-page .simple-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 30px auto 40px;
+  padding-left: 10px;
 }
 
 .projects-page .simple-links a,
 .projects-page .simple-links span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 1rem;
+  gap: 10px;
+
+  padding: 6px 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+
   color: var(--highlight-color);
   text-decoration: none;
 }
 
+/* Hover (subtle, professional) */
 .projects-page .simple-links a:hover {
   color: var(--accent-color);
 }
 
-/* Tiny icons */
+/* Tiny icons — aligned properly */
 .projects-page .simple-links img {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 1px; /* baseline alignment fix */
 }
 
-/* Disabled */
+/* Disabled item */
 .projects-page .disabled-link {
   color: #777;
   cursor: default;
