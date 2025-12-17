@@ -559,5 +559,110 @@ footer {
   }
 }
 
+/* =====================================================
+   PROJECTS PAGE CLEANUP (SCOPED)
+   ===================================================== */
+
+.projects-page {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+}
+
+/* Title */
+.projects-page .page-title,
+.projects-page h1,
+.projects-page h2 {
+  text-align: center;
+  color: var(--highlight-color);
+  margin-bottom: 15px;
+}
+
+.projects-page p {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  text-align: center;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+/* Featured links */
+.projects-page .featured-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.projects-page .featured-link {
+  background: #f4f6fb;
+  color: var(--highlight-color);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.projects-page .featured-link:hover {
+  background: #e8ecf8;
+  transform: translateY(-3px);
+}
+
+/* Project grid */
+.projects-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Project cards */
+.projects-page .project-card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+.projects-page .project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--highlight-color);
+}
+
+.projects-page .project-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+}
+
+/* Highlight card */
+.projects-page .project-card.highlight {
+  background: #f7f4ff;
+  border-left: 5px solid var(--highlight-color);
+}
+
+/* Prevent index/hero effects */
+.projects-page .hero,
+.projects-page .index-container,
+.projects-page .sidebar,
+.projects-page .main,
+.projects-page .info {
+  display: none;
+}
+
+/* Mobile refinements */
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 30px 20px;
+  }
+
+  .projects-page p {
+    font-size: 1rem;
+  }
+}
+
 
 
