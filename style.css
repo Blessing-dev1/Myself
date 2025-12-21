@@ -695,37 +695,66 @@ footer {
 }
 
 /* =====================================================
-   PROJECT QUICK LINKS (CLEAN & HORIZONTAL)
+   PROJECT QUICK LINKS (WITH ICONS)
    ===================================================== */
 
 .projects-page .project-links {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  align-items: center;
+  gap: 40px;
 
   list-style: none;
   padding: 0;
   margin: 32px 0 48px;
 }
 
-/* Links */
-.projects-page .project-links a {
+/* Link layout */
+.projects-page .project-links a,
+.projects-page .project-links .disabled {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
+}
 
+/* Icons */
+.projects-page .project-links .icon {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.projects-page .project-links .icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Active links */
+.projects-page .project-links a {
   color: var(--highlight-color);
   transition: color 0.2s ease;
 }
 
 .projects-page .project-links a:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
 
-/* Disabled item */
+/* Disabled */
 .projects-page .project-links .disabled {
   color: #999;
   font-weight: 400;
   cursor: default;
+}
+
+.projects-page .project-links .disabled img {
+  opacity: 0.5;
 }
