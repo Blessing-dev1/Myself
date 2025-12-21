@@ -83,6 +83,17 @@ nav ul li a:hover {
   color: var(--accent-color);
 }
 
+/* =========================
+   ACTIVE NAV LINK
+   ========================= */
+
+nav ul li a.active {
+  color: #FFD700;               /* Yellow */
+  font-weight: 600;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 4px;
+}
+
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 768px) {
   #menu-toggle {
@@ -758,3 +769,4 @@ footer {
 .projects-page .project-links .disabled img {
   opacity: 0.5;
 }
+
