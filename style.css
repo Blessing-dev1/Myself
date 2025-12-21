@@ -695,87 +695,37 @@ footer {
 }
 
 /* =====================================================
-   LINK ITEMS
+   PROJECT QUICK LINKS (CLEAN & HORIZONTAL)
    ===================================================== */
 
-.projects-page .simple-links a,
-.projects-page .simple-links .disabled-link {
+.projects-page .project-links {
   display: flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 14px 18px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  text-decoration: none;
-  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-}
-
-/* Remove divider from last item */
-.projects-page .simple-links li:last-child a,
-.projects-page .simple-links li:last-child .disabled-link {
-  border-bottom: none;
-}
-
-/* Active links */
-.projects-page .simple-links a {
-  color: var(--highlight-color);
-  cursor: pointer;
-}
-
-/* Hover effect */
-.projects-page .simple-links a:hover {
-  color: var(--accent-color);
-  background-color: rgba(0, 0, 0, 0.025);
-  transform: translateX(6px);
-}
-
-/* =====================================================
-   PROJECT ICONS
-   ===================================================== */
-
-.projects-page .project-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-
-  display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 32px;
 
-  background: rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 48px;
 }
 
-.projects-page .project-icon img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
+/* Links */
+.projects-page .project-links a {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  color: var(--highlight-color);
+  transition: color 0.2s ease;
 }
 
-/* Icon hover */
-.projects-page .simple-links a:hover .project-icon {
-  background: rgba(0, 0, 0, 0.08);
+.projects-page .project-links a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
-/* =====================================================
-   DISABLED STATE
-   ===================================================== */
-
-.projects-page .simple-links .disabled-link {
+/* Disabled item */
+.projects-page .project-links .disabled {
   color: #999;
-  cursor: not-allowed;
   font-weight: 400;
-}
-
-.projects-page .disabled-link .project-icon {
-  opacity: 0.6;
-}
-
-.projects-page .simple-links .disabled-link:hover {
-  background: none;
-  transform: none;
+  cursor: default;
 }
