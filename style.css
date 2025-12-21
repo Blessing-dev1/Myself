@@ -665,45 +665,59 @@ footer {
 }
 
 /* =====================================================
-   PROJECTS – CLEAN LINK LIST (FINAL FIX)
+   PROJECTS – REFINED LINK LIST
    ===================================================== */
 
 .projects-page .simple-links {
   max-width: 600px;
-  margin: 30px auto 40px;
-  padding-left: 10px;
+  margin: 40px auto;
+  padding: 0;
+  list-style: none;
 }
 
 .projects-page .simple-links a,
-.projects-page .simple-links span {
+.projects-page .simple-links .disabled-link {
   display: flex;
   align-items: center;
-  gap: 10px;
-
-  padding: 6px 0;
-  font-size: 1.05rem;
+  gap: 12px;
+  
+  padding: 12px 16px;
+  font-size: 0.95rem;
   font-weight: 500;
-
-  color: var(--highlight-color);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Soft divider */
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
 
-/* Hover (subtle, professional) */
+/* Remove border from last item */
+.projects-page .simple-links a:last-child {
+  border-bottom: none;
+}
+
+/* Professional Link Color & Hover */
+.projects-page .simple-links a {
+  color: var(--highlight-color);
+}
+
 .projects-page .simple-links a:hover {
   color: var(--accent-color);
+  background-color: rgba(0, 0, 0, 0.02); /* Very subtle depth */
+  padding-left: 20px; /* Micro-interaction movement */
 }
 
-/* Tiny icons — aligned properly */
+/* Icon refinement */
 .projects-page .simple-links img {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
   flex-shrink: 0;
-  margin-top: 1px; /* baseline alignment fix */
+  opacity: 0.8;
 }
 
-/* Disabled item */
-.projects-page .disabled-link {
-  color: #777;
-  cursor: default;
+/* Disabled/Placeholder item */
+.projects-page .simple-links .disabled-link {
+  color: #999;
+  cursor: not-allowed;
+  font-weight: 400;
 }
