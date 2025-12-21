@@ -203,12 +203,28 @@
     <p>&copy; 2025 Blessing A Sithole</p>
   </footer>
 
-  <!-- Mobile Menu -->
-  <script>
-    document.getElementById('menu-toggle').addEventListener('click', function () {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    });
-  </script>
+ <script>
+  // Mobile menu toggle
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('nav-links').classList.toggle('show');
+  });
+
+  // Active nav link detection (FIXED)
+  const currentPage = decodeURIComponent(
+    location.pathname.split("/").pop() || "index.html"
+  ).replace(/\s+/g, "").toLowerCase();
+
+  document.querySelectorAll(".navbar a").forEach(link => {
+    const linkPage = link
+      .getAttribute("href")
+      .replace(/\s+/g, "")
+      .toLowerCase();
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
 </body>
 </html>
