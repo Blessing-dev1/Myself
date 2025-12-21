@@ -59,31 +59,29 @@
     <p>&copy; 2025 Blessing A Sithole</p>
   </footer>
 
- <script>
+<script>
   // Mobile menu toggle
   document.getElementById('menu-toggle').addEventListener('click', function () {
     document.getElementById('nav-links').classList.toggle('show');
   });
 
-  // Active nav link detection (FIXED)
+  // Active nav highlighting
   const currentPage = decodeURIComponent(
     location.pathname.split("/").pop() || "index.html"
-  ).replace(/\s+/g, "").toLowerCase();
+  ).toLowerCase();
 
-  document.querySelectorAll(".navbar a").forEach(link => {
-    const linkPage = link
-      .getAttribute("href")
-      .replace(/\s+/g, "")
-      .toLowerCase();
-
+  document.querySelectorAll("nav a").forEach(link => {
+    const linkPage = decodeURIComponent(link.getAttribute("href")).toLowerCase();
     if (linkPage === currentPage) {
       link.classList.add("active");
     }
   });
 </script>
 
+
 </body>
 </html>
+
 
 
 
