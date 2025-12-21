@@ -665,7 +665,7 @@ footer {
 }
 
 /* =====================================================
-   PROJECTS – REFINED LINK LIST (COMPLETE)
+   PROJECTS – REFINED LINK LIST
    ===================================================== */
 
 .projects-page {
@@ -676,26 +676,28 @@ footer {
 .projects-page .links-card {
   max-width: 600px;
   margin: 40px auto;
-  background: #ffffff;
+  background: #fff;
   border-radius: 14px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
   overflow: hidden;
 }
 
-/* Reset list */
+/* List reset */
 .projects-page .simple-links {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-/* Reset li */
 .projects-page .simple-links li {
   margin: 0;
   padding: 0;
 }
 
-/* Links & disabled items */
+/* =====================================================
+   LINK ITEMS
+   ===================================================== */
+
 .projects-page .simple-links a,
 .projects-page .simple-links .disabled-link {
   display: flex;
@@ -709,10 +711,10 @@ footer {
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Remove border on last item */
+/* Remove divider from last item */
 .projects-page .simple-links li:last-child a,
 .projects-page .simple-links li:last-child .disabled-link {
   border-bottom: none;
@@ -724,29 +726,55 @@ footer {
   cursor: pointer;
 }
 
-/* Hover micro-interaction */
+/* Hover effect */
 .projects-page .simple-links a:hover {
   color: var(--accent-color);
   background-color: rgba(0, 0, 0, 0.025);
   transform: translateX(6px);
 }
 
-/* Icons */
-.projects-page .simple-links img {
-  width: 16px;
-  height: 16px;
-  opacity: 0.8;
+/* =====================================================
+   PROJECT ICONS
+   ===================================================== */
+
+.projects-page .project-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
 }
 
-/* Disabled link */
+.projects-page .project-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Icon hover */
+.projects-page .simple-links a:hover .project-icon {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================================
+   DISABLED STATE
+   ===================================================== */
+
 .projects-page .simple-links .disabled-link {
   color: #999;
   cursor: not-allowed;
   font-weight: 400;
 }
 
-/* Prevent hover animation on disabled */
+.projects-page .disabled-link .project-icon {
+  opacity: 0.6;
+}
+
 .projects-page .simple-links .disabled-link:hover {
   background: none;
   transform: none;
