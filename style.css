@@ -650,8 +650,8 @@ footer {
 
 /* The actual image inside the circle */
 .projects-page .project-links .icon img {
-  width: 60%; /* Adjust this to make image larger/smaller inside circle */
-  height: 60%;
+  width: 20%; /* Adjust this to make image larger/smaller inside circle */
+  height: 20%;
   object-fit: contain;
   display: block;
 }
@@ -718,3 +718,4 @@ footer {
     gap: 15px;
   }
 }
+
