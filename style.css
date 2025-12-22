@@ -635,10 +635,10 @@ footer {
 
 /* Circle Container for Icons */
 .projects-page .project-links .icon {
-  width: 150px; /* Increased size for better visibility */
-  height: 150px;
+  width: 350px; /* Increased size for better visibility */
+  height: 350px;
   background-color: #f0f0f0;
-  border-radius: 50%;
+  border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -718,6 +718,7 @@ footer {
     gap: 15px;
   }
 }
+
 
 
 
