@@ -575,16 +575,17 @@ footer {
 }
 
 /* =====================================================
-   PROJECTS PAGE CLEANUP (SCOPED)
+   PROJECTS PAGE LAYOUT
    ===================================================== */
 
 .projects-page {
+  width: 100%;
   background: #ffffff;
   border-radius: 12px;
   padding: 40px 30px;
 }
 
-/* Title */
+/* Title & Description */
 .projects-page .page-title,
 .projects-page h1,
 .projects-page h2 {
@@ -601,65 +602,104 @@ footer {
   font-size: 1.05rem;
 }
 
-/* Featured links */
-.projects-page .featured-projects {
+/* =====================================================
+   PROJECT QUICK LINKS (WITH ICONS)
+   ===================================================== */
+
+.projects-page .project-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 35px;
+  align-items: flex-start;
+  gap: 30px;
+  list-style: none;
+  padding: 20px;
+  margin: 32px 0 48px;
 }
 
-.projects-page .featured-link {
-  background: #f4f6fb;
-  color: var(--highlight-color);
-  padding: 12px 18px;
-  border-radius: 8px;
+/* Individual Link Item */
+.projects-page .project-links li a,
+.projects-page .project-links .disabled {
+  display: flex;
+  flex-direction: column; /* Icon on top, text on bottom */
+  align-items: center;
+  gap: 12px;
+  width: 140px; /* Uniform width for alignment */
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.95rem;
   font-weight: 500;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  color: var(--highlight-color);
+  transition: color 0.2s ease;
 }
 
-.projects-page .featured-link:hover {
-  background: #e8ecf8;
-  transform: translateY(-3px);
+/* Circle Container for Icons */
+.projects-page .project-links .icon {
+  width: 50px; /* Increased size for better visibility */
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  overflow: hidden; /* Keeps image inside the circle */
 }
 
-/* Project grid */
+/* The actual image inside the circle */
+.projects-page .project-links .icon img {
+  width: 60%; /* Adjust this to make image larger/smaller inside circle */
+  height: 60%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hover Effects */
+.projects-page .project-links a:hover .icon {
+  transform: scale(1.1);
+  background-color: #007bff;
+}
+
+.projects-page .project-links a:hover {
+  color: #007bff;
+}
+
+/* Disabled/In Progress State */
+.projects-page .project-links .disabled {
+  color: #999;
+  cursor: default;
+}
+
+.projects-page .project-links .disabled .icon {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+/* =====================================================
+   PROJECT GRID & CARDS
+   ===================================================== */
+
 .projects-page .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
 
-/* Project cards */
 .projects-page .project-card {
   background: #ffffff;
   border: 1px solid #e6e6e6;
   border-radius: 12px;
   padding: 20px;
-  text-align: left;
 }
 
-.projects-page .project-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: var(--highlight-color);
-}
-
-.projects-page .project-card p {
-  margin: 4px 0;
-  font-size: 0.95rem;
-  color: #333;
-  text-align: left;
-}
-
-/* Highlight card */
 .projects-page .project-card.highlight {
   background: #f7f4ff;
   border-left: 5px solid var(--highlight-color);
 }
 
-/* Prevent index/hero effects */
+/* Hide unneeded elements */
 .projects-page .hero,
 .projects-page .index-container,
 .projects-page .sidebar,
@@ -668,140 +708,13 @@ footer {
   display: none;
 }
 
-/* Mobile refinements */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   .projects-page {
-    padding: 30px 20px;
+    padding: 30px 15px;
   }
-
-  .projects-page p {
-    font-size: 1rem;
+  
+  .projects-page .project-links {
+    gap: 15px;
   }
 }
-
-/* =====================================================
-   PROJECTS – REFINED LINK LIST
-   ===================================================== */
-
-.projects-page {
-  width: 100%;
-}
-
-/* Card container */
-.projects-page .links-card {
-  max-width: 600px;
-  margin: 40px auto;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-}
-
-/* List reset */
-.projects-page .simple-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.projects-page .simple-links li {
-  margin: 0;
-  padding: 0;
-}
-
-/* =====================================================
-   PROJECT QUICK LINKS (WITH ICONS)
-   ===================================================== */
-
-.projects-page .project-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-
-  list-style: none;
-  padding: 0;
-  margin: 32px 0 48px;
-}
-
-/* Link layout */
-.projects-page .project-links a,
-.projects-page .project-links .disabled {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-/* Updated Icons */
-.projects-page .project-links .icon {
-  width: 40px;         /* Increased from 28px */
-  height: 40px;        /* Increased from 28px */
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  /* Optional: Increase the actual icon/font size inside */
-  font-size: 1.5rem;   
-}
-
-.projects-page .project-links .icon svg {
-  width: 24px;         /* Adjust internal SVG size if necessary */
-  height: 24px;
-}
-
-.projects-page .project-links .icon {
-  width: 42px;
-  height: 42px;
-  background-color: #f0f0f0; /* Light grey background */
-  border-radius: 50%;        /* Makes it a circle */
-  color: #007bff;            /* Brand color for the icon itself */
-  
-  /* Adds a soft shadow for visibility */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  
-  transition: transform 0.2s ease; /* Smooth hover effect */
-}
-
-/* Add a hover state for better UX */
-.projects-page .project-links .icon:hover {
-  transform: scale(1.1);     /* Slightly enlarges on hover */
-  background-color: #007bff;
-  color: white;
-}
-
-}
-
-.projects-page .project-links .icon img {
-  width: 20px;
-  height: 20px;
-}
-
-/* Active links */
-.projects-page .project-links a {
-  color: var(--highlight-color);
-  transition: color 0.2s ease;
-}
-
-.projects-page .project-links a:hover {
-  color: var(--accent-color);
-}
-
-/* Disabled */
-.projects-page .project-links .disabled {
-  color: #999;
-  font-weight: 400;
-  cursor: default;
-}
-
-.projects-page .project-links .disabled img {
-  opacity: 0.5;
-}
-
-
-
