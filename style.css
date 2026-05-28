@@ -696,7 +696,7 @@ footer {
 
 /* Disabled/In Progress State */
 .projects-page .project-links .disabled {
-  color: #9ca3af;
+  color: #ffffff;
   cursor: default;
   background: #f9fafb;
 }
