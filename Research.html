@@ -1,116 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-<section id="research" class="research-section">
-  <div class="section-container">
-    <h2>Research</h2>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    <p class="research-intro">
-      My research focuses on reliable intelligent systems, machine learning,
-      medical computer vision, healthcare IoT, data integrity, embedded systems,
-      and artificial intelligence in high-stakes applications.
-    </p>
+  <meta
+    name="description"
+    content="Research portfolio featuring work in machine learning, medical computer vision, healthcare IoT, occupational AI exposure, embedded systems, and cybersecurity."
+  >
 
-    <div class="research-grid">
+  <title>Research | My Portfolio</title>
 
-      <article class="research-card">
-        <span class="research-tag">Medical AI & Healthcare IoT</span>
+  <style>
+    :root {
+      --purple-dark: #4f12c9;
+      --purple: #641bd6;
+      --blue-dark: #0648b8;
+      --blue: #1689df;
+      --cyan: #35c4f2;
+      --background: #f3f7ff;
+      --surface: #ffffff;
+      --text-dark: #1f2937;
+      --text-medium: #4b5563;
+      --border: rgba(79, 18, 201, 0.14);
+      --shadow: 0 14px 35px rgba(32, 63, 120, 0.14);
+      --radius-large: 24px;
+      --radius-medium: 16px;
+    }
 
-        <h3>
-          Integrity-Aware Wound Classification Under Image Degradation
-        </h3>
+    * {
+      box-sizing: border-box;
+    }
 
-        <p class="research-meta">
-          Undergraduate Research Assistant, NH-INBRE<br>
-          Keene State College | Faculty Mentor: Dr. Wei Lu<br>
-          May 2026–Present
-        </p>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Navigation */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(
+        90deg,
+        var(--purple-dark),
+        var(--purple)
+      );
+      box-shadow: 0 4px 14px rgba(30, 25, 80, 0.2);
+    }
+
+    #menu-toggle {
+      display: none;
+      margin-left: auto;
+      padding: 14px 20px;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      font-size: 1.9rem;
+      cursor: pointer;
+    }
+
+    #nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0 18px;
+      list-style: none;
+    }
+
+    #nav-links li {
+      margin: 0;
+    }
+
+    #nav-links a {
+      display: block;
+      padding: 22px 14px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    #nav-links a:hover,
+    #nav-links a:focus-visible {
+      background: rgba(255, 255, 255, 0.12);
+      color: #6ee7ff;
+      outline: none;
+    }
+
+    #nav-links a[aria-current="page"] {
+      background: rgba(255, 255, 255, 0.16);
+      color: #8be8ff;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 24px 110px;
+      background:
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(255, 255, 255, 0.28),
+          transparent 28%
+        ),
+        linear-gradient(
+          120deg,
+          #9dc2f2 0%,
+          var(--blue) 52%,
+          var(--blue-dark) 100%
+        );
+      text-align: center;
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -100px;
+      bottom: -140px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: rgba(89, 220, 255, 0.16);
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: 24px auto 0;
+      color: #eef8ff;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: #ffffff;
+      color: var(--purple-dark);
+      box-shadow: 0 10px 24px rgba(20, 32, 80, 0.18);
+    }
+
+    .button-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+    }
+
+    /* Main layout */
+
+    main {
+      padding: 0 24px 80px;
+    }
+
+    .content-shell {
+      position: relative;
+      max-width: 1240px;
+      margin: -52px auto 0;
+    }
+
+    .intro-panel {
+      padding: 40px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-panel h2 {
+      margin-top: 0;
+      color: var(--purple-dark);
+      font-size: 2rem;
+    }
+
+    .intro-panel p {
+      margin-bottom: 0;
+      color: var(--text-medium);
+      font-size: 1.06rem;
+    }
+
+    .section {
+      padding-top: 72px;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 10px;
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--text-medium);
+      font-size: 1.05rem;
+    }
+
+    /* Research cards */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .research-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 44px rgba(32, 63, 120, 0.18);
+    }
+
+    .research-tag {
+      align-self: flex-start;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        var(--purple),
+        var(--blue)
+      );
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .research-card h3 {
+      margin: 18px 0 12px;
+      color: #4210b8;
+      font-size: 1.42rem;
+      line-height: 1.32;
+    }
+
+    .research-meta {
+      margin: 0 0 18px;
+      color: #14528f;
+      font-size: 0.94rem;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .research-card p {
+      color: var(--text-medium);
+    }
+
+    .research-card ul {
+      padding-left: 20px;
+      color: var(--text-medium);
+    }
+
+    .research-card li {
+      margin-bottom: 8px;
+    }
+
+    .research-result {
+      margin-top: auto;
+      padding: 18px;
+      border-radius: var(--radius-medium);
+      background: linear-gradient(
+        135deg,
+        #f0ebff,
+        #e8f5ff
+      );
+    }
+
+    .research-result strong {
+      color: var(--purple-dark);
+    }
+
+    .publication {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+      color: var(--text-medium);
+    }
+
+    /* Metrics */
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .metric-card {
+      padding: 26px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      background: #ffffff;
+      text-align: center;
+      box-shadow: 0 10px 28px rgba(32, 63, 120, 0.1);
+    }
+
+    .metric-value {
+      display: block;
+      color: var(--purple-dark);
+      font-size: 2.1rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-medium);
+      font-size: 0.92rem;
+    }
+
+    /* Interests */
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .interest-item {
+      padding: 11px 16px;
+      border: 1px solid rgba(79, 18, 201, 0.14);
+      border-radius: 999px;
+      background: #ffffff;
+      color: #4220a8;
+      font-weight: 700;
+      box-shadow: 0 7px 18px rgba(32, 63, 120, 0.08);
+    }
+
+    /* Timeline */
+
+    .timeline {
+      position: relative;
+      margin-top: 26px;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 8px;
+      width: 3px;
+      border-radius: 999px;
+      background: linear-gradient(
+        var(--purple),
+        var(--blue)
+      );
+      content: "";
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-medium);
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(32, 63, 120, 0.1);
+    }
+
+    .timeline-item::before {
+      position: absolute;
+      top: 31px;
+      left: -29px;
+      width: 14px;
+      height: 14px;
+      border: 4px solid #ffffff;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 0 2px var(--purple);
+      content: "";
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 8px;
+      color: var(--purple-dark);
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--text-medium);
+    }
+
+    /* Contact callout */
+
+    .contact-callout {
+      margin-top: 72px;
+      padding: 44px;
+      border-radius: var(--radius-large);
+      background: linear-gradient(
+        120deg,
+        var(--purple-dark),
+        var(--blue-dark)
+      );
+      color: #ffffff;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-callout h2 {
+      margin-top: 0;
+      font-size: 2.2rem;
+    }
+
+    .contact-callout p {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      color: #eaf4ff;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 28px 20px;
+      background: #25105d;
+      color: #dcd6f8;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 1100px) {
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #nav-links {
+        gap: 4px;
+      }
+
+      #nav-links a {
+        padding-right: 9px;
+        padding-left: 9px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 820px) {
+      nav {
+        padding: 0 16px;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      #nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0 0 16px;
+      }
+
+      #nav-links.active {
+        display: flex;
+      }
+
+      #nav-links a {
+        padding: 14px 16px;
+        border-radius: 10px;
+        white-space: normal;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
+
+      .intro-panel,
+      .research-card,
+      .contact-callout {
+        padding: 26px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      main {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content-shell {
+        margin-top: -36px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .timeline {
+        padding-left: 24px;
+      }
+
+      .timeline-item::before {
+        left: -23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav aria-label="Main navigation">
+    <button
+      id="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-controls="nav-links"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <ul id="nav-links">
+      <li>
+        <a href="index.html">My Journey</a>
+      </li>
+
+      <li>
+        <a href="Licenses & Certifications.html">
+          Licenses & Certifications
+        </a>
+      </li>
+
+      <li>
+        <a href="Projects.html">Projects</a>
+      </li>
+
+      <li>
+        <a href="Research.html" aria-current="page">
+          Research
+        </a>
+      </li>
+
+      <li>
+        <a href="Leadership.html">Leadership</a>
+      </li>
+
+      <li>
+        <a href="Courses.html">Courses</a>
+      </li>
+
+      <li>
+        <a href="Experiences.html">Experiences</a>
+      </li>
+
+      <li>
+        <a href="Volunteering.html">Volunteering</a>
+      </li>
+
+      <li>
+        <a href="Extracurricular.html">Extracurricular</a>
+      </li>
+
+      <li>
+        <a href="Contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">Research Portfolio</span>
+
+      <h1>Building Reliable Intelligent Systems</h1>
+
+      <p>
+        My research combines machine learning, computer vision,
+        healthcare IoT, quantitative modeling, data integrity,
+        embedded systems, and cybersecurity to study how intelligent
+        technologies behave in real-world and high-stakes environments.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#research-projects">
+          Explore My Research
+        </a>
+
+        <a class="button button-secondary" href="Contact.html">
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-shell">
+
+      <section class="intro-panel" aria-labelledby="research-overview">
+        <h2 id="research-overview">Research Overview</h2>
 
         <p>
-          This research investigates how image degradation affects the reliability
-          of machine-learning models used for wound classification. The project
-          evaluates model performance under blur, Gaussian noise, JPEG compression,
-          brightness loss, reduced resolution, and other image-quality conditions.
+          I am a Computer Science and Mathematics student at Keene State
+          College with research experience in reliable artificial
+          intelligence, medical computer vision, healthcare IoT, data
+          integrity, quantitative modeling, and embedded healthcare systems.
+          My work focuses on understanding how technical systems perform when
+          their inputs are noisy, incomplete, degraded, or potentially
+          untrustworthy.
         </p>
+      </section>
 
-        <ul>
-          <li>Developed controlled image-degradation and preprocessing pipelines.</li>
-          <li>Evaluated classification accuracy, confidence, robustness, and failure modes.</li>
-          <li>Analyzed model behavior under realistic healthcare-IoT conditions.</li>
-          <li>Contributed to experimental design, analysis, and manuscript preparation.</li>
-        </ul>
+      <section
+        class="section"
+        id="research-projects"
+        aria-labelledby="research-projects-heading"
+      >
+        <div class="section-heading">
+          <h2 id="research-projects-heading">Featured Research</h2>
 
-        <p class="publication">
-          <strong>Manuscript:</strong>
-          “Integrity-Aware Wound Classification Under Image Degradation in
-          Healthcare IoT Systems,” submitted to WIDECOM 2026.
-        </p>
-      </article>
+          <p>
+            These projects reflect my interest in developing intelligent
+            systems that are accurate, robust, secure, and appropriate for
+            real-world deployment.
+          </p>
+        </div>
 
-      <article class="research-card">
-        <span class="research-tag">AI, Automation & Quantitative Modeling</span>
+        <div class="research-grid">
 
-        <h3>
-          A Task-Based Quantitative Model for Predicting Occupational Exposure
-          to Artificial Intelligence
-        </h3>
+          <article class="research-card">
+            <span class="research-tag">
+              Medical AI and Healthcare IoT
+            </span>
 
-        <p class="research-meta">
-          Undergraduate Researcher<br>
-          Keene State College | Faculty Mentor: Dr. Wei Lu<br>
-          March 2026–Present
-        </p>
+            <h3>
+              Integrity-Aware Wound Classification Under Image Degradation
+            </h3>
+
+            <p class="research-meta">
+              Undergraduate Research Assistant, NH-INBRE<br>
+              Keene State College<br>
+              Faculty Mentor: Dr. Wei Lu<br>
+              May 2026–Present
+            </p>
+
+            <p>
+              This research investigates how image-quality problems affect the
+              reliability of machine-learning models used for wound
+              classification. The project evaluates a MobileNetV3-Small
+              convolutional neural network under clean and degraded image
+              conditions.
+            </p>
+
+            <ul>
+              <li>
+                Developed preprocessing and controlled image-degradation
+                pipelines.
+              </li>
+
+              <li>
+                Evaluated model robustness under blur, Gaussian noise,
+                JPEG compression, brightness loss, and reduced image quality.
+              </li>
+
+              <li>
+                Analyzed accuracy, precision, recall, F1-score, confidence,
+                and model failure patterns.
+              </li>
+
+              <li>
+                Examined the importance of image integrity in remote
+                healthcare and connected medical systems.
+              </li>
+
+              <li>
+                Contributed to experimental design, interpretation,
+                visualization, and manuscript preparation.
+              </li>
+            </ul>
+
+            <div class="research-result">
+              <strong>Key result:</strong>
+              The model achieved 86.05% accuracy on original test images.
+              Brightness loss produced the largest performance decline,
+              reducing accuracy to 73.26%.
+            </div>
+
+            <p class="publication">
+              <strong>Manuscript:</strong>
+              “Integrity-Aware Wound Classification Under Image Degradation
+              in Healthcare IoT Systems,” submitted to WIDECOM 2026.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <span class="research-tag">
+              AI and Quantitative Modeling
+            </span>
+
+            <h3>
+              A Task-Based Quantitative Model for Predicting Occupational
+              Exposure to Artificial Intelligence
+            </h3>
+
+            <p class="research-meta">
+              Undergraduate Researcher<br>
+              Keene State College<br>
+              Faculty Mentor: Dr. Wei Lu<br>
+              March 2026–Present
+            </p>
+
+            <p>
+              This project develops a quantitative framework for estimating
+              how occupations may be affected by artificial intelligence and
+              automation. Instead of assigning one automation score to an
+              entire occupation, the model examines the individual tasks that
+              workers perform.
+            </p>
+
+            <ul>
+              <li>
+                Cleaned, integrated, and validated occupational and task-level
+                workforce datasets.
+              </li>
+
+              <li>
+                Selected variables related to work activities, technology,
+                skills, and occupational characteristics.
+              </li>
+
+              <li>
+                Developed task-based measures of AI and automation exposure.
+              </li>
+
+              <li>
+                Evaluated patterns across occupations and job categories.
+              </li>
+
+              <li>
+                Co-authored the paper and contributed to the conference
+                presentation.
+              </li>
+            </ul>
+
+            <div class="research-result">
+              <strong>Research contribution:</strong>
+              The task-based framework provides a more detailed view of
+              occupational exposure by recognizing that jobs contain a mixture
+              of automatable, augmentable, and human-centered tasks.
+            </div>
+
+            <p class="publication">
+              <strong>Conference presentation:</strong>
+              International Conference on Complex, Intelligent, and Software
+              Intensive Systems, CISIS 2026.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <span class="research-tag">
+              Embedded Systems and Cybersecurity
+            </span>
+
+            <h3>Smart Syringe Pump Design</h3>
+
+            <p class="research-meta">
+              Undergraduate Researcher<br>
+              Keene State College<br>
+              February 2025
+            </p>
+
+            <p>
+              This project involved designing an embedded control system for
+              automated fluid delivery using Arduino hardware and C++. The
+              project combined control logic, hardware integration, system
+              testing, reliability analysis, and cybersecurity.
+            </p>
+
+            <ul>
+              <li>
+                Designed and programmed an Arduino-based fluid-delivery
+                control system.
+              </li>
+
+              <li>
+                Integrated mechanical, electronic, and software components.
+              </li>
+
+              <li>
+                Evaluated dispensing accuracy, consistency, and reliability.
+              </li>
+
+              <li>
+                Investigated cybersecurity vulnerabilities in the control
+                architecture.
+              </li>
+
+              <li>
+                Implemented access-control protections against unauthorized
+                manipulation.
+              </li>
+            </ul>
+
+            <div class="research-result">
+              <strong>Research contribution:</strong>
+              The project demonstrated that embedded healthcare devices must
+              be evaluated for both functional performance and security.
+            </div>
+
+            <p class="publication">
+              <strong>Presentation:</strong>
+              Nebraska Conference for Undergraduate Women in Mathematics.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="research-metrics">
+        <div class="section-heading">
+          <h2 id="research-metrics">Research Highlights</h2>
+
+          <p>
+            Selected figures from my current medical-computer-vision research.
+          </p>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">431</span>
+            <span class="metric-label">
+              Wound images evaluated
+            </span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-value">7</span>
+            <span class="metric-label">
+              Wound categories
+            </span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-value">86.05%</span>
+            <span class="metric-label">
+              Test accuracy on original images
+            </span>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-value">73.26%</span>
+            <span class="metric-label">
+              Accuracy under brightness loss
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="research-interests">
+        <div class="section-heading">
+          <h2 id="research-interests">Research Interests</h2>
+
+          <p>
+            I am especially interested in the engineering and mathematical
+            foundations required to make intelligent systems dependable.
+          </p>
+        </div>
+
+        <div class="interest-list">
+          <span class="interest-item">
+            Reliable Machine Learning
+          </span>
+
+          <span class="interest-item">
+            Medical Computer Vision
+          </span>
+
+          <span class="interest-item">
+            Healthcare IoT
+          </span>
+
+          <span class="interest-item">
+            Data Integrity
+          </span>
+
+          <span class="interest-item">
+            Robust AI Deployment
+          </span>
+
+          <span class="interest-item">
+            Software Engineering
+          </span>
+
+          <span class="interest-item">
+            Embedded Systems
+          </span>
+
+          <span class="interest-item">
+            Cybersecurity
+          </span>
+
+          <span class="interest-item">
+            Quantitative Modeling
+          </span>
+
+          <span class="interest-item">
+            AI and Automation
+          </span>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="research-timeline">
+        <div class="section-heading">
+          <h2 id="research-timeline">Research Timeline</h2>
+
+          <p>
+            A summary of my undergraduate research and technical presentation
+            experience.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item">
+            <h3>2026–Present: Medical AI and Healthcare IoT</h3>
+
+            <p>
+              Conducting NH-INBRE-supported research on wound-classification
+              robustness, image degradation, model confidence, and data
+              integrity under the mentorship of Dr. Wei Lu.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>2026–Present: Occupational AI Exposure</h3>
+
+            <p>
+              Developing and evaluating a task-based quantitative model for
+              measuring occupational exposure to artificial intelligence and
+              automation.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>2026: CISIS Conference Presentation</h3>
+
+            <p>
+              Co-authored and presented research on a task-based quantitative
+              model for occupational AI exposure at CISIS 2026.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>2025: Smart Syringe Pump Research</h3>
+
+            <p>
+              Designed and tested an Arduino- and C++-based automated fluid
+              delivery system with reliability and cybersecurity protections.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>2025: Undergraduate Conference Presentation</h3>
+
+            <p>
+              Presented the smart syringe pump project at the Nebraska
+              Conference for Undergraduate Women in Mathematics.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="contact-callout" aria-labelledby="collaboration-heading">
+        <h2 id="collaboration-heading">
+          Interested in My Research?
+        </h2>
 
         <p>
-          This project develops a task-based model for estimating how occupations
-          may be affected by artificial intelligence and automation. The model
-          examines individual job tasks rather than treating each occupation as
-          fully automatable or non-automatable.
+          I welcome opportunities to discuss research, technical projects,
+          internships, conference collaborations, and work involving reliable
+          machine learning, computer vision, data integrity, or embedded
+          systems.
         </p>
 
-        <ul>
-          <li>Cleaned and integrated occupational and task-level datasets.</li>
-          <li>Selected predictive variables related to technology and job characteristics.</li>
-          <li>Evaluated occupational exposure patterns across job categories.</li>
-          <li>Co-authored and presented the resulting research paper.</li>
-        </ul>
-
-        <p class="publication">
-          <strong>Presentation:</strong>
-          International Conference on Complex, Intelligent, and Software
-          Intensive Systems, CISIS 2026.
-        </p>
-      </article>
-
-      <article class="research-card">
-        <span class="research-tag">Embedded Systems & Cybersecurity</span>
-
-        <h3>Smart Syringe Pump Design</h3>
-
-        <p class="research-meta">
-          Undergraduate Researcher<br>
-          Keene State College<br>
-          February 2025
-        </p>
-
-        <p>
-          This project involved designing an Arduino- and C++-based embedded
-          control system for automated fluid delivery. The system combined
-          hardware integration, software control, reliability testing, and
-          cybersecurity protections.
-        </p>
-
-        <ul>
-          <li>Designed and programmed the embedded control architecture.</li>
-          <li>Tested dispensing accuracy, consistency, and system reliability.</li>
-          <li>Evaluated vulnerabilities in the control system.</li>
-          <li>Implemented access-control protections against unauthorized manipulation.</li>
-        </ul>
-
-        <p class="publication">
-          <strong>Presentation:</strong>
-          Nebraska Conference for Undergraduate Women in Mathematics.
-        </p>
-      </article>
+        <a class="button button-primary" href="Contact.html">
+          Get in Touch
+        </a>
+      </section>
 
     </div>
-  </div>
-</section>
+  </main>
+
+  <footer>
+    <p>
+      © 2026 My Portfolio. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+    });
+
+    navLinks.addEventListener("click", function (event) {
+      if (
+        event.target.tagName === "A" &&
+        window.innerWidth <= 820
+      ) {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 820) {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+
+</body>
+</html>
